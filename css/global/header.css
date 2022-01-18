@@ -1,12 +1,13 @@
 .header-bg {
   background-color: var(--cor-3);
+  padding: 20px 0 20px 0;
 }
 .header {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  padding: 4px 20px 4px 2px;
+  padding: 4px 20px 4px 20px;
 }
 
 .header a {
@@ -26,8 +27,14 @@
   background: var(--cor-2);
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
 }
 
 .header-menu li {
-  padding: 4px 20px 4px 20px;
+  padding: 0 20px 0 20px;
+}
+.header-menu li:nth-child(1) {
+  border-right: 1px solid var(--cor-4);
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
