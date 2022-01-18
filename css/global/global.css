@@ -1,0 +1,38 @@
+body {
+  margin: 0px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+ul,
+p,
+blockquote,
+dd {
+  margin: 0px;
+}
+
+ul {
+  padding: 0px;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  /* height: auto; significa que ele irá crescer de acordo com o tamanho da imagem
+   */
+  height: auto;
+  display: block;
+  border-radius: 4px;
+}
+
+img [src$=".jpg"] {
+  border-radius: 4px;
+}
