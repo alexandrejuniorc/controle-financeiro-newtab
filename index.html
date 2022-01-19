@@ -25,6 +25,36 @@
         </nav>
       </div>
     </header>
+
+    <!-- CONTEÚDO DO PÁGINA -->
+
+    <main>
+      <article class="transacao-bg container">
+        <!-- Lista de definição <dl></dl> -->
+        <!-- Termo que vai ser definido <dt></dt> -->
+        <!-- Definição do termo <dd></dd> -->
+        <div class="nTransacao container">
+          <h1 class="font-g cor-0">Nova transação</h1>
+          <div>
+            <h2 class="font-p cor-1">Tipo de transação</h2>
+            <select>
+              <option value="compra">Compra</option>
+              <option value="venda">Venda</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="name">Nome da mercadoria</label>
+            <input type="text" name="name" required id="name" />
+          </div>
+          <div>
+            <label for="valor">Valor</label>
+            <input type="text" name="valor" required id="valor" />
+          </div>
+          <a class="botao" href="#">Adicionar transação</a>
+        </div>
+      </article>
+    </main>
     <footer></footer>
   </body>
 </html>
