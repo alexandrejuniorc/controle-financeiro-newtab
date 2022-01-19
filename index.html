@@ -6,6 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="icon" href="./assets/logo.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter&display=swap"
+      rel="stylesheet"
+    />
     <title>Controle Financeiro</title>
   </head>
   <body>
@@ -29,31 +35,45 @@
     <!-- CONTEÚDO DO PÁGINA -->
 
     <main>
-      <article class="transacao-bg container">
-        <!-- Lista de definição <dl></dl> -->
-        <!-- Termo que vai ser definido <dt></dt> -->
-        <!-- Definição do termo <dd></dd> -->
-        <div class="nTransacao container">
-          <h1 class="font-g cor-0">Nova transação</h1>
-          <div>
-            <h2 class="font-p cor-1">Tipo de transação</h2>
-            <select>
-              <option value="compra">Compra</option>
-              <option value="venda">Venda</option>
-            </select>
-          </div>
+      <section class="formulario-bg container">
+        <form class="form" action="./index.html">
+          <div class="nTransacao">
+            <h1 class="font-g cor-0">Nova transação</h1>
+            <div class="tTransacao">
+              <label class="font-p">Tipo de transação</label>
+              <select class="opcoes font-p">
+                <option value="compra">Compra</option>
+                <option value="venda">Venda</option>
+              </select>
+            </div>
 
-          <div>
-            <label for="name">Nome da mercadoria</label>
-            <input type="text" name="name" required id="name" />
+            <div class="tMercadoria font-p">
+              <label for="name">Nome da mercadoria</label>
+              <input
+                class="font-p"
+                type="text"
+                name="name"
+                required
+                id="name"
+                placeholder="Input"
+              />
+            </div>
+            <div class="tValor font-p">
+              <label for="valor">Valor</label>
+              <input
+                type="text"
+                name="valor"
+                required
+                id="valor"
+                placeholder="R$ 0,00"
+              />
+            </div>
+            <button class="botao bTransacao font-p-inter" href="#">
+              Adicionar transação
+            </button>
           </div>
-          <div>
-            <label for="valor">Valor</label>
-            <input type="text" name="valor" required id="valor" />
-          </div>
-          <a class="botao" href="#">Adicionar transação</a>
-        </div>
-      </article>
+        </form>
+      </section>
     </main>
     <footer></footer>
   </body>

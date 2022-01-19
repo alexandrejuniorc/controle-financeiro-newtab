@@ -8,13 +8,17 @@
 }
 
 .botao {
-  display: inline-block;
-  padding: 16px 32px;
-  background: var(--cor-1);
-  border-radius: 4px;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  background-color: var(--cor-1);
   color: var(--cor-2);
-  font: 600 1.125rem/1.35 "Lato", sans-serif;
-  max-width: max-content;
+  /*  font: 400 14px/22 "Inter", sans-serif; */
   border: none;
   cursor: pointer;
+  /* COMPONENTES DA FONTE DO BOTÃO */
+  font-family: "Inter", sans-serif;
+  font-weight: 400px;
+  font-size: 14px;
+  line-height: 22px;
 }
