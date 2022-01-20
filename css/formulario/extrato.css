@@ -25,10 +25,20 @@
   border-bottom: 1px solid var(--cor-4);
 }
 
+/* PADRONIZA OS PARÂMETROS DAS MERCADORIAS */
 .mercadorias {
   display: flex;
   justify-content: space-between;
   padding: 7px 20px 8px 40px;
   border-bottom: 1px solid var(--cor-4);
-  /*   background: url(../../assets/img/+.svg) no-repeat 11px 7px; */
+  /*  background: url(../../assets/img/+.svg) no-repeat 23px 11px; */
+}
+
+/* ADICIONA O ÍCONE + QUANDO O TIPO DE TRANSAÇÃO É UMA VENDA */
+.add {
+  background: url(../../assets/img/+.svg) no-repeat 23px 11px;
+}
+/* ADICIONA O ÍCONE - QUANDO O TIPO DE TRANSAÇÃO É COMPRA  */
+.remove {
+  background: url(../../assets/img/-.svg) no-repeat 23px 15px;
 }
