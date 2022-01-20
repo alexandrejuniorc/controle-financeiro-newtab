@@ -1,0 +1,14 @@
+/* ADICIONA O PARÂMETRO PARA DESCER O FOOTER ATÉ ONDE
+SEJA NECESSÁRIO */
+.footer-bg {
+  background: var(--cor-1);
+  width: auto;
+  height: 10px;
+  top: 1500px;
+  /*  border: 8px solid; */
+  /*   margin: 600px; */
+}
+/* POSICIONA O FOOTER NA POSIÇÃO CORRETA */
+.footer {
+  margin: 398px;
+}
