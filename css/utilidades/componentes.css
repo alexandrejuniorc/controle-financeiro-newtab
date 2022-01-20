@@ -1,9 +1,26 @@
+/* PARÂMETROS DE CONTAINER COMPLETO PARA ALINHAR A PÁGINA */
 .container {
   box-sizing: border-box;
   max-width: 1200px;
   padding-left: 20px;
   padding-right: 20px;
   margin-left: auto;
+  margin-right: auto;
+}
+
+/* PARÂMETROS DE CONTAINER PARA TIRAR O ESPAÇO DO LADO DIREITO */
+.container1 {
+  box-sizing: border-box;
+  max-width: 1200px;
+  padding-left: 20px;
+  margin-left: auto;
+}
+
+/* PARÂMETROS DE CONTAINER PARA TIRAR O ESPAÇO DO LADO ESQUERDO */
+.container2 {
+  box-sizing: border-box;
+  max-width: 1200px;
+  padding-right: 20px;
   margin-right: auto;
 }
 

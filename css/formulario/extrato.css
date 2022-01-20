@@ -1,0 +1,34 @@
+.transacao {
+  display: flex;
+  padding-top: 30px;
+}
+
+.extrato {
+  border: 1px solid var(--cor-4);
+  /*  border: none; */
+  margin-left: 20px;
+  padding-top: 21px;
+  width: 680px;
+  height: 281px;
+}
+
+.extrato-dados h1 {
+  align-items: center;
+  text-align: center;
+}
+
+/* PADRONIZA OS PARÂMETROS MERCADORIA E VALOR COM SUAS DEVIDAS CONFIGURAÇÕES */
+.tExtrato {
+  display: flex;
+  justify-content: space-between;
+  padding: 19px 20px 0px 40px;
+  border-bottom: 1px solid var(--cor-4);
+}
+
+.mercadorias {
+  display: flex;
+  justify-content: space-between;
+  padding: 7px 20px 8px 40px;
+  border-bottom: 1px solid var(--cor-4);
+  /*   background: url(../../assets/img/+.svg) no-repeat 11px 7px; */
+}

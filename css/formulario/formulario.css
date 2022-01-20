@@ -1,7 +1,8 @@
 /* DÁ O ESPAÇO ENTRE O HEADER PARA O FORMULÁRIO */
-.formulario-bg {
+/* .formulario-bg {
   padding-top: 30px;
-}
+  PADRONIZEI O PADDING-TOP NO EXTRATO, POIS, IRÁ PEGAR PARA AS DUAS DIVS, TANTO DE TRANSAÇÃO QUANTO PARA EXTRATO
+} */
 /* DÁ A FORMA E O TAMANHO DO FORMULÁRIO */
 .form {
   display: flex;

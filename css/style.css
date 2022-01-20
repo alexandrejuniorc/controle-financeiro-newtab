@@ -8,6 +8,9 @@
 @import "./utilidades/tipografia.css";
 @import "./utilidades/cores.css";
 
-/* NOVA TRANSAÇÃO */
+/* FORMULÁRIO */
 
-@import "./novaTransacao/tipodeTransacao.css";
+@import "./formulario/formulario.css";
+
+/* EXTRATO */
+@import "./formulario/extrato.css";
