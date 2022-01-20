@@ -1,0 +1,10 @@
+/* PADRONIZA O FOOTER DE ACORDO COM O TAMANHO ESPECIFICADO */
+@media screen and (max-width: 1024px) {
+  .footer-bg {
+    /*     height: 344px; */
+    /*   width: 400px; */
+    /*    border-radius: 4px; */
+    margin: 302px 0px 0px 0px;
+    padding: 8px 0px 0px 0px;
+  }
+}
