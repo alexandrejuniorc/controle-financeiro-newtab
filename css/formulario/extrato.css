@@ -1,8 +1,10 @@
+/* FAZ A QUEBRA DO CONTAINER ASSIM DEIXANDO "NOVA TRANSAÇÃO"
+E "EXTRATO DE TRANSAÇÕES" UM DO LADO DO OUTRO */
 .transacao {
   display: flex;
-  padding-top: 30px;
+  padding-top: 30px; /* SEPARA O CONTAINER DO HEADER */
 }
-
+/* ADICIONA PARÂMETROS DO CONTAINER DE EXTRATO  */
 .extrato {
   border: 1px solid var(--cor-4);
   /*  border: none; */
@@ -11,7 +13,7 @@
   width: 680px;
   height: 281px;
 }
-
+/* CENTRALIZA O TEXTO "EXTRATO DE TRANSAÇÕES" */
 .extrato-dados h1 {
   align-items: center;
   text-align: center;
@@ -35,10 +37,26 @@
 }
 
 /* ADICIONA O ÍCONE + QUANDO O TIPO DE TRANSAÇÃO É UMA VENDA */
-.add {
+.venda {
   background: url(../../assets/img/+.svg) no-repeat 23px 11px;
 }
 /* ADICIONA O ÍCONE - QUANDO O TIPO DE TRANSAÇÃO É COMPRA  */
-.remove {
+.compra {
   background: url(../../assets/img/-.svg) no-repeat 23px 15px;
+}
+
+/* PADRONIZA OS PARÂMETROS DO VALOR TOTAL */
+.vTotal {
+  display: flex;
+  justify-content: space-between;
+  padding: 7px 20px 0px 40px;
+  margin-top: 3px;
+  border-top: 1px solid var(--cor-4);
+}
+
+/* PADRONIZA OS PARÂMETROS DO LUCRO */
+.lucro {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0px 20px 8px 40px;
 }
