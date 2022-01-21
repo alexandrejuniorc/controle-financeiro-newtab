@@ -1,0 +1,16 @@
+@media screen and (max-width: 768px) {
+  .transacao {
+    display: flex;
+    flex-direction: column;
+  }
+  .nTransacao {
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+  }
+  .short {
+  }
+
+  .long {
+  }
+}

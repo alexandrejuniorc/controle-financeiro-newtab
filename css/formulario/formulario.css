@@ -1,10 +1,5 @@
-/* DÁ O ESPAÇO ENTRE O HEADER PARA O FORMULÁRIO */
-/* .formulario-bg {
-  padding-top: 30px;
-  PADRONIZEI O PADDING-TOP NO EXTRATO, POIS, IRÁ PEGAR PARA AS DUAS DIVS, TANTO DE TRANSAÇÃO QUANTO PARA EXTRATO
-} */
 /* DÁ A FORMA E O TAMANHO DO FORMULÁRIO */
-.form {
+.formulario-bg {
   display: flex;
   border-radius: 4px;
   border: 1px solid var(--cor-4);
@@ -13,7 +8,7 @@
 }
 
 /* CENTRALIZA A PRINCIPAL INFORMAÇÃO DO FORMULÁRIO */
-.form h1 {
+.formulario-bg h1 {
   text-align: center;
 }
 /* PARÂMETROS DE ESPAÇAMENTO E ALINHAMENTO DO FORMULÁRIO */

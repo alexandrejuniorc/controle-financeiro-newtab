@@ -7,11 +7,10 @@ E "EXTRATO DE TRANSAÇÕES" UM DO LADO DO OUTRO */
 /* ADICIONA PARÂMETROS DO CONTAINER DE EXTRATO  */
 .extrato {
   border: 1px solid var(--cor-4);
-  /*  border: none; */
+  border: none;
   margin-left: 20px;
-  padding-top: 21px;
-  width: 680px;
-  height: 281px;
+  padding-top: 20px;
+  width: 100%;
 }
 /* CENTRALIZA O TEXTO "EXTRATO DE TRANSAÇÕES" */
 .extrato-dados h1 {

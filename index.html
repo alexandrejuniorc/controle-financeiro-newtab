@@ -36,44 +36,43 @@
 
     <main>
       <div class="transacao container">
+        <!-- MANTÉM TODO O LAYOUT DA PÁGINA -->
         <section class="formulario-bg">
-          <form class="form" action="./index.html">
-            <div class="nTransacao">
-              <h1 class="font-g cor-0">Nova transação</h1>
-              <div class="tTransacao">
-                <label class="font-p">Tipo de transação</label>
-                <select class="opcoes font-p">
-                  <option value="compra">Compra</option>
-                  <option value="venda">Venda</option>
-                </select>
-              </div>
-
-              <div class="tMercadoria font-p">
-                <label for="name">Nome da mercadoria</label>
-                <input
-                  class="font-p"
-                  type="text"
-                  name="name"
-                  required
-                  id="name"
-                  placeholder="Input"
-                />
-              </div>
-              <div class="tValor font-p">
-                <label for="valor">Valor</label>
-                <input
-                  type="text"
-                  name="valor"
-                  required
-                  id="valor"
-                  placeholder="R$ 0,00"
-                />
-              </div>
-              <button class="botao bTransacao font-p-inter" href="#">
-                Adicionar transação
-              </button>
+          <div class="nTransacao">
+            <h1 class="font-g cor-0">Nova transação</h1>
+            <div class="tTransacao">
+              <label class="font-p">Tipo de transação</label>
+              <select class="opcoes font-p">
+                <option value="compra">Compra</option>
+                <option value="venda">Venda</option>
+              </select>
             </div>
-          </form>
+
+            <div class="tMercadoria font-p">
+              <label for="name">Nome da mercadoria</label>
+              <input
+                class="font-p"
+                type="text"
+                name="name"
+                required
+                id="name"
+                placeholder="Input"
+              />
+            </div>
+            <div class="tValor font-p">
+              <label for="valor">Valor</label>
+              <input
+                type="text"
+                name="valor"
+                required
+                id="valor"
+                placeholder="R$ 0,00"
+              />
+            </div>
+            <button class="botao bTransacao font-p-inter" href="#">
+              Adicionar transação
+            </button>
+          </div>
         </section>
 
         <div class="extrato">
