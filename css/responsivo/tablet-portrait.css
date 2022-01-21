@@ -1,12 +1,12 @@
 @media screen and (max-width: 768px) {
   .transacao {
-    display: flex;
     flex-direction: column;
   }
-  .nTransacao {
-    flex-direction: row;
+  .formulario-bg {
     width: 100%;
-    justify-content: center;
+  }
+  .formulario-dados {
+    flex-direction: row;
   }
   .short {
   }

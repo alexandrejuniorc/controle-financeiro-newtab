@@ -27,11 +27,14 @@
 .botao {
   display: flex;
   width: 100%;
+  flex-direction: column;
   align-items: center;
   background-color: var(--cor-1);
   color: var(--cor-2);
   /*  font: 400 14px/22 "Inter", sans-serif; */
+  padding: 5px;
   border: none;
+  border-radius: 4px;
   cursor: pointer;
   /* COMPONENTES DA FONTE DO BOTÃO */
   font-family: "Inter", sans-serif;
