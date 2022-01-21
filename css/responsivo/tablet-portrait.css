@@ -4,13 +4,22 @@
   }
   .formulario-bg {
     width: 100%;
+    /*   padding: none; */
   }
   .formulario-dados {
     flex-direction: row;
+    width: 100%;
+  }
+
+  .botao {
+    width: 200px;
   }
   .short {
+    width: 25%;
   }
 
   .long {
+    width: 50%;
+    margin: 0 20px;
   }
 }
