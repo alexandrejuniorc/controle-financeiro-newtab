@@ -1,25 +1,36 @@
 @media screen and (max-width: 768px) {
+  /* FAZ O LAYOUT QUEBRAR EM COLUNA PRA FICAR UM EM BAIXO DO OUTRO */
   .transacao {
     flex-direction: column;
   }
+  /* DEIXA O BACKGROUND DO FORMULÁRIO COM O MESMO TAMANHO DA TELA */
   .formulario-bg {
     width: 100%;
     /*   padding: none; */
   }
+  /* FAZ O CONTEÚDO DO FORMULÁRIO FICAR EM FILEIRA */
   .formulario-dados {
     flex-direction: row;
     width: 100%;
   }
-
+  /* FAZ O BOTÃO FICAR COM 200PX */
   .botao {
     width: 200px;
   }
+  /* O CONTEÚDO QUE UTILIZAR ESSA VARIÁVEL IRÁ OCUPAR 25% DO BACKGROUND ESTABELECIDO */
   .short {
     width: 25%;
   }
-
+  /* O CONTEÚDO QUE UTILIZAR ESSA VARIÁVEL IRÁ OCUPAR 50% DO BACKGROUND ESTABELECIDO  */
   .long {
     width: 50%;
     margin: 0 20px;
+  }
+
+  /* EXTRATO */
+
+  /* DÁ A MARGEM PRA SEPARAR "EXTRATO DE TRANSAÇÕES" DE "NOVA TRANSAÇÃO" */
+  .extrato-bg {
+    margin-top: 20px;
   }
 }

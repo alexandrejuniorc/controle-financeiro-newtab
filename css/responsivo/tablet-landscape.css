@@ -1,5 +1,13 @@
+/* DEIXA O BOTÃO COM O MESMO TAMANHO DO FORMULÁRIO */
 @media screen and (min-width: 800px) {
   .botao {
-    width: 100%;
+    width: 400px;
+  }
+
+  /* EXTRATO */
+
+  /* DA A MARGEM PARA SEPARAR EXTRATO DE NOVA TRANSAÇÃO */
+  .extrato-bg {
+    margin-left: 20px;
   }
 }

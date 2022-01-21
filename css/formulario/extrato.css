@@ -6,10 +6,8 @@ E "EXTRATO DE TRANSAÇÕES" UM DO LADO DO OUTRO */
 }
 /* ADICIONA PARÂMETROS DO CONTAINER DE EXTRATO  */
 .extrato-bg {
-  border: 1px solid var(--cor-4);
-  border: none;
-  margin-left: 20px;
-  padding-top: 20px;
+  /*   border: 1px solid var(--cor-4); */
+  padding-top: 20px 0 0 0px;
   width: 100%;
 }
 /* CENTRALIZA O TEXTO "EXTRATO DE TRANSAÇÕES" */
@@ -22,7 +20,7 @@ E "EXTRATO DE TRANSAÇÕES" UM DO LADO DO OUTRO */
 .extratos {
   display: flex;
   justify-content: space-between;
-  padding: 19px 20px 0px 40px;
+  padding: 19px 20px 0px 20px;
   border-bottom: 1px solid var(--cor-4);
 }
 
