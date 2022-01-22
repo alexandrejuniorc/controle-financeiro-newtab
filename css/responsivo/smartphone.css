@@ -6,6 +6,7 @@
   .formulario-bg {
     border: none;
     padding: 26px 20px 28px 20px;
+    display: block;
   }
   .formulario-dados {
     flex-direction: column;
