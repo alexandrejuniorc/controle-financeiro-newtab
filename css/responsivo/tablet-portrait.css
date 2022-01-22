@@ -4,9 +4,9 @@
     align-items: center;
   }
 
-  .header nav {
+  /* .header nav {
     display: none;
-  }
+  } */
 
   .titulo-header {
     margin-left: auto;
@@ -33,11 +33,12 @@
   /* O CONTEÚDO QUE UTILIZAR ESSA VARIÁVEL IRÁ OCUPAR 25% DO BACKGROUND ESTABELECIDO */
   .short {
     width: 25%;
+    margin: 0 15px;
   }
   /* O CONTEÚDO QUE UTILIZAR ESSA VARIÁVEL IRÁ OCUPAR 50% DO BACKGROUND ESTABELECIDO  */
   .long {
     width: 50%;
-    margin: 0 20px;
+    /*  margin: 0 20px; */
   }
 
   /* EXTRATO */
@@ -45,5 +46,37 @@
   /* DÁ A MARGEM PRA SEPARAR "EXTRATO DE TRANSAÇÕES" DE "NOVA TRANSAÇÃO" */
   .extrato-bg {
     margin-top: 20px;
+  }
+
+  .boxMenu {
+    border: 0;
+  }
+
+  .header-menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    flex-direction: column;
+    height: 100%;
+    background-color: var(--cor-1);
+    color: var(--cor-2);
+    text-align: left;
+    align-items: flex-start;
+  }
+
+  .header-menu .divisor-menu {
+    display: none;
+  }
+  .hamburguer,
+  .fecha-menu {
+    display: block;
+  }
+
+  .header-menu {
+    display: none;
+  }
+
+  .boxMenu:hover .header-menu {
+    display: flex;
   }
 }

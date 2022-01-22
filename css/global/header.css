@@ -32,12 +32,26 @@
   align-items: center;
 }
 
-.header-menu li {
-  padding: 0 20px 0 20px;
+/* nav {
+  padding: 4px 20px 4px 20px;
+  background: #fff;
 }
 
+nav .ul {
+  margin: 0 20px;
+} */
+
+.header-menu li {
+  padding: 4px 20px 4px 20px;
+}
+
+/* .header-menu ul {
+  padding: 4px 20px 4px 20px;
+} */
+/* 
 .divisor-menu {
   border-right: 1px solid var(--cor-4);
   padding: 10px 0px 10px 0px;
   margin: 10px 0px 10px 0px;
 }
+ */
