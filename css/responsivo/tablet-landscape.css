@@ -16,7 +16,8 @@
   .titulo-header {
     margin-left: 0;
   }
-  .hamburguer {
+  .hamburguer,
+  .fecha-menu {
     display: none;
   }
 }
