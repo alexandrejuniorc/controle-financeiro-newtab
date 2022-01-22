@@ -76,7 +76,19 @@
     display: none;
   }
 
+  .header-menu li {
+    padding: 20px 20px;
+  }
+
   .boxMenu:hover .header-menu {
     display: flex;
+  }
+
+  .fecha-menu {
+    margin: 20px;
+  }
+
+  .header-menu li {
+    /*   background: #fff; */
   }
 }
