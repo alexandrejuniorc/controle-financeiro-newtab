@@ -8,6 +8,10 @@
     display: none;
   }
 
+  .titulo-header {
+    margin-left: auto;
+  }
+
   .hamburguer {
     /* display: none; */
     /* display: flex; */

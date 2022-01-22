@@ -1,5 +1,5 @@
 /* DEIXA O BOTÃO COM O MESMO TAMANHO DO FORMULÁRIO */
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 769px) {
   .botao {
     width: 400px;
   }
@@ -12,6 +12,10 @@
   }
 
   /* MENU HAMBURGUER */
+
+  .titulo-header {
+    margin-left: 0;
+  }
   .hamburguer {
     display: none;
   }
