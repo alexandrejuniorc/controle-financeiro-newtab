@@ -10,4 +10,9 @@
   .extrato-bg {
     margin-left: 20px;
   }
+
+  /* MENU HAMBURGUER */
+  .hamburguer {
+    display: none;
+  }
 }
