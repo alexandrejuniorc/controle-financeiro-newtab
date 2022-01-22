@@ -28,4 +28,8 @@
   .botao {
     width: 100%;
   }
+
+  .extrato-dados {
+    margin: 20px;
+  }
 }
