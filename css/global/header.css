@@ -1,13 +1,14 @@
 .header-bg {
+  display: flex;
+  justify-content: center;
   background-color: var(--cor-3);
   padding: 20px 0 20px 0;
 }
 .header {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  width: 100%;
+  justify-content: center;
   align-items: center;
-  /*   padding: 4px 20px 4px 20px; */
   padding: 4px 20px 4px 20px;
 }
 
@@ -34,8 +35,9 @@
 .header-menu li {
   padding: 0 20px 0 20px;
 }
-.header-menu li:nth-child(1) {
+
+.divisor-menu {
   border-right: 1px solid var(--cor-4);
-  margin-top: 10px;
-  margin-bottom: 10px;
+  padding: 10px 0px 10px 0px;
+  margin: 10px 0px 10px 0px;
 }
