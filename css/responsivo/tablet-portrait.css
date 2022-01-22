@@ -12,12 +12,6 @@
     margin-left: auto;
   }
 
-  .hamburguer {
-    /* display: none; */
-    /* display: flex; */
-    background: url(../../assets/img/hamburguer.svg) no-repeat;
-  }
-
   /* FAZ O LAYOUT QUEBRAR EM COLUNA PRA FICAR UM EM BAIXO DO OUTRO */
   .transacao {
     flex-direction: column;
