@@ -1,4 +1,19 @@
 @media screen and (max-width: 768px) {
+  /* HEADER */
+  .header {
+    align-items: center;
+  }
+
+  .header nav {
+    display: none;
+  }
+
+  .hamburguer {
+    /* display: none; */
+    /* display: flex; */
+    background: url(../../assets/img/hamburguer.svg) no-repeat;
+  }
+
   /* FAZ O LAYOUT QUEBRAR EM COLUNA PRA FICAR UM EM BAIXO DO OUTRO */
   .transacao {
     flex-direction: column;
