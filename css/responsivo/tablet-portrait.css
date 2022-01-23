@@ -12,10 +12,10 @@
     flex-direction: column;
   }
   /* DEIXA O BACKGROUND DO FORMULÁRIO COM O MESMO TAMANHO DA TELA */
-  .formulario-bg {
+  /*  .formulario-bg {
     width: 100%;
-    /*   padding: none; */
-  }
+    padding: none;
+  } */
   /* FAZ O CONTEÚDO DO FORMULÁRIO FICAR EM FILEIRA */
   .formulario-dados {
     flex-direction: row;
@@ -23,17 +23,24 @@
   }
   /* FAZ O BOTÃO FICAR COM 200PX */
   .botao {
+    display: flex;
+    justify-content: right;
     width: 200px;
+  }
+  .mercadoria {
+    justify-content: center;
+  }
+  .opcoes:nth-child(1) {
   }
   /* O CONTEÚDO QUE UTILIZAR ESSA VARIÁVEL IRÁ OCUPAR 25% DO BACKGROUND ESTABELECIDO */
   .short {
     width: 25%;
-    margin: 0 15px;
+    /*   width: 150px; */
   }
   /* O CONTEÚDO QUE UTILIZAR ESSA VARIÁVEL IRÁ OCUPAR 50% DO BACKGROUND ESTABELECIDO  */
   .long {
     width: 50%;
-    /*  margin: 0 20px; */
+    margin: 0 20px;
   }
 
   /* EXTRATO */
@@ -60,6 +67,7 @@
 
   .header-menu li {
     padding: 0 20px 7px 20px;
+    height: 32px;
   }
 
   .header-menu .divisor-menu {
@@ -84,5 +92,17 @@
 
   .fecha-menu {
     margin: 20px 20px 26px 20px;
+  }
+}
+
+@media screen and (max-width: 597px) {
+  .formlario-bg {
+    padding: 0;
+  }
+  .formulario-dados {
+    justify-content: center;
+  }
+  .formulario-dados .mercadoria:nth-child(1) {
+    margin: 0 0 20px 0;
   }
 }

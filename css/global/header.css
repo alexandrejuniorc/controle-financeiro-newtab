@@ -43,15 +43,16 @@ nav .ul {
 
 .header-menu li {
   padding: 4px 20px 4px 20px;
+  height: 32px;
+  align-items: center;
+  display: flex;
 }
 
 /* .header-menu ul {
   padding: 4px 20px 4px 20px;
 } */
-/* 
+
 .divisor-menu {
-  border-right: 1px solid var(--cor-4);
-  padding: 10px 0px 10px 0px;
-  margin: 10px 0px 10px 0px;
+  display: flex;
+  align-items: center;
 }
- */

@@ -4,8 +4,13 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
   padding: 20px 20px;
+  border-radius: 4px;
+}
+
+.formulario-bg h1 {
+  display: flex;
+  justify-content: center;
 }
 
 .transacao {
@@ -18,7 +23,7 @@
 .formulario-dados {
   display: flex;
   flex-direction: column;
-  width: 400px;
+  width: 100%;
 }
 /* PADRONIZA TODO OS ITENS DENTRO DO FORMULÁRIO */
 .mercadoria {
@@ -28,10 +33,10 @@
   padding: 0px 0px 20px 0px;
 }
 
-/* .mercadoria button {
-  justify-content: center;
-  width: 100%;
-} */
+.tBotao {
+  display: flex;
+  justify-content: right;
+}
 
 /* ESTILIZA O SELECT (OPÇÃO DE COMPRA) */
 .mercadoria select {
