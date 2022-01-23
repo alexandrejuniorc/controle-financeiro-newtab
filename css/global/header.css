@@ -29,7 +29,7 @@
   background: var(--cor-2);
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
+  /*   align-items: center; */
 }
 
 /* nav {

@@ -1,16 +1,11 @@
 @media screen and (max-width: 768px) {
-  /* HEADER */
-  .header {
-    align-items: center;
-  }
-
   /* .header nav {
     display: none;
   } */
 
-  .titulo-header {
+  /*  .titulo-header {
     margin-left: auto;
-  }
+  } */
 
   /* FAZ O LAYOUT QUEBRAR EM COLUNA PRA FICAR UM EM BAIXO DO OUTRO */
   .transacao {
@@ -60,8 +55,11 @@
     height: 100%;
     background-color: var(--cor-1);
     color: var(--cor-2);
-    text-align: left;
-    align-items: flex-start;
+    text-align: right;
+  }
+
+  .header-menu li {
+    padding: 0 20px 7px 20px;
   }
 
   .header-menu .divisor-menu {
@@ -76,19 +74,15 @@
     display: none;
   }
 
-  .header-menu li {
+  /*  .header-menu li {
     padding: 20px 20px;
   }
-
+ */
   .boxMenu:hover .header-menu {
     display: flex;
   }
 
   .fecha-menu {
-    margin: 20px;
-  }
-
-  .header-menu li {
-    /*   background: #fff; */
+    margin: 20px 20px 26px 20px;
   }
 }
