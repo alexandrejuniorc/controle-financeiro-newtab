@@ -1,40 +1,79 @@
 @media screen and (max-width: 411px) {
+  /* TIRA O PADDING PARA QUE A DISTÂNCIA DA TRANSAÇÃO FIQUE MAIS PRÓXIMA DO HEADER PRA UMA VISUALIZAÇÃO MELHOR. */
   .transacao {
     padding: 0px;
   }
 
+  /* REMOVE A BORDA DO FORMULÁRIO E ADICIONA PADDING DE ACORDO COM O DESIGN PROPOSTO.  */
   .formulario-bg {
     border: none;
     padding: 26px 20px 28px 20px;
     display: block;
   }
+
+  /* DEIXA O FORMULÁRIO EM COLUNA E REMOVE O PADDING PARA QUE FIQUE MAIS VISÍVEL NO MOBILE. */
   .formulario-dados {
     flex-direction: column;
-    /* align-items: center */
+    padding: 0;
   }
 
-  .formulario-dados .mercadoria:nth-child(1) {
+  /* REMOVE A MARGEM DO PRIMEIRO ITEM DO FORMULÁRIO PRA FICAR COMPATÍVEL COM O TAMANHO. */
+  .formulario-dados .mercadoria:first-child {
     margin: 0;
   }
 
+  /* REMOVE O CABEÇALHO DO FORMULÁRIO. */
   .formulario-bg h1 {
     display: none;
   }
 
+  /* DEIXA AS MERCADORIAS COM O MESMO TAMANHO DO FORMULARIO-DADOS E REMOVE A MARGEM. */
   .mercadoria {
     width: auto;
     margin: 0;
   }
+
+  /* ADICIONA UMA DIVISÃO ENTRE TIPO DE TRANSAÇÃO E EXTRATO DE TRANSAÇÕES. */
   .divisao {
     border: 1px solid var(--cor-4);
     margin: 0 20px;
   }
 
+  /* DEIXA O BOTÃO COM O MESMO TAMANHO DE FORMULARIO-DADOS */
   .botao {
     width: 100%;
   }
 
+  /* TIRA A MARGEM DO BOTÃO QUE ESTÁ ESTABELECIDA COMO PADRÃO PARA QUE SE ENCAIXE MELHOR NO LAYOUT MOBILE. */
+  .tBotao {
+    margin: 0;
+    padding: 0;
+  }
+
+  /* DA UMA MARGEM AO EXTRATO PARA QUE NÃO FIQUE COLADO NOS CANTOS  */
   .extrato-dados {
     margin: 20px;
+  }
+
+  /* COLOCA O PADDING DE ACORDO COM O LAYOUT NAS MERCADORIAS PARA QUE TENHA UM MELHOR COMPORTAMENTO NO MOBILE. */
+  .mercadorias {
+    padding: 7px 10px 8px 10px;
+  }
+
+  /* O HEADER-MENU IRÁ OCUPAR 80% DA TELA DE ACORDO COM O LAYOUT ESPECIFICADO. */
+  .header-menu {
+    width: 80%;
+    align-items: flex-end;
+  }
+
+  /* COLOCAR O FECHAR NA POSIÇÃO DESEJADA. */
+  .fecha-menu {
+    display: flex;
+    margin: 20px 90% 26px 20px;
+  }
+
+  /* TIRA O PADDING DOS TEXTOS PARA MELHOR COMPORTAMENTO NO LAYOUT MOBILE. */
+  .header h2 {
+    padding-left: 0;
   }
 }

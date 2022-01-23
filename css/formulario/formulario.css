@@ -33,9 +33,12 @@
   padding: 0px 0px 20px 0px;
 }
 
+/* POSICIONA O BOTÃO AONDE QUERO */
 .tBotao {
   display: flex;
   justify-content: right;
+  padding: 0 20px;
+  margin: 0;
 }
 
 /* ESTILIZA O SELECT (OPÇÃO DE COMPRA) */
@@ -48,7 +51,8 @@
 
 /* ESTILIZA OS TODOS OS INPUTS DE UMA VEZ SÓ */
 input {
-  padding: 8px;
+  line-height: 22px;
+  padding: 6px;
   border: 1px solid;
   border-radius: 4px;
   color: var(--cor-5);
