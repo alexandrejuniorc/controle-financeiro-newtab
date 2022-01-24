@@ -1,4 +1,4 @@
-/* DÁ A FORMA E O TAMANHO DO FORMULÁRIO */
+/* DÁ A FORMA E O TAMANHO DO FORMULÁRIO. */
 .formulario-bg {
   border: 1px solid var(--cor-4);
   display: flex;
@@ -8,24 +8,26 @@
   border-radius: 4px;
 }
 
+/* DEIXA O CABEÇALHO DO FORMULÁRIO MALEÁVEL E QUE SE CENTRALIZE NO CENTRO. */
 .formulario-bg h1 {
   display: flex;
   justify-content: center;
 }
 
+/* DEIXA A CLASSE TRANSAÇÃO MALEÁVEL, CENTRALIZA ELA NO MEIO E ADICIONA UM PADDING PARA QUE SE COMPORTE IGUAL AO DESIGN. */
 .transacao {
   display: flex;
   justify-content: center;
   padding: 15px;
 }
 
-/* PARÂMETROS DE ESPAÇAMENTO E ALINHAMENTO DO FORMULÁRIO */
+/* PARÂMETROS DE ESPAÇAMENTO E ALINHAMENTO DO FORMULÁRIO. */
 .formulario-dados {
   display: flex;
   flex-direction: column;
   width: 100%;
 }
-/* PADRONIZA TODO OS ITENS DENTRO DO FORMULÁRIO */
+/* PADRONIZA TODO OS ITENS DENTRO DO FORMULÁRIO. */
 .mercadoria {
   display: flex;
   flex-direction: column;
@@ -33,7 +35,7 @@
   padding: 0px 0px 20px 0px;
 }
 
-/* POSICIONA O BOTÃO AONDE QUERO */
+/* POSICIONA O BOTÃO AONDE QUERO. */
 .tBotao {
   display: flex;
   justify-content: right;
@@ -41,7 +43,7 @@
   margin: 0;
 }
 
-/* ESTILIZA O SELECT (OPÇÃO DE COMPRA) */
+/* ESTILIZA O SELECT (OPÇÃO DE COMPRA). */
 .mercadoria select {
   padding: 8px;
   color: var(--cor-5);
@@ -49,7 +51,7 @@
   border-color: var(--cor-4);
 }
 
-/* ESTILIZA OS TODOS OS INPUTS DE UMA VEZ SÓ */
+/* ESTILIZA OS TODOS OS INPUTS DE UMA VEZ SÓ. */
 input {
   line-height: 22px;
   padding: 6px;

@@ -1,22 +1,22 @@
 /* FAZ A QUEBRA DO CONTAINER ASSIM DEIXANDO "NOVA TRANSAÇÃO"
-E "EXTRATO DE TRANSAÇÕES" UM DO LADO DO OUTRO */
+E "EXTRATO DE TRANSAÇÕES" UM DO LADO DO OUTRO.*/
 .transacao {
   display: flex;
-  padding-top: 30px; /* SEPARA O CONTAINER DO HEADER */
+  padding-top: 30px; /* SEPARA O CONTAINER DO HEADER. */
 }
-/* ADICIONA PARÂMETROS DO CONTAINER DE EXTRATO  */
+/* ADICIONA PARÂMETROS DO CONTAINER DE EXTRATO.  */
 .extrato-bg {
   /*   border: 1px solid var(--cor-4); */
   padding-top: 20px 0 0 0px;
   width: 100%;
 }
-/* CENTRALIZA O TEXTO "EXTRATO DE TRANSAÇÕES" */
+/* CENTRALIZA O TEXTO "EXTRATO DE TRANSAÇÕES". */
 .extrato-dados h1 {
   align-items: center;
   text-align: center;
 }
 
-/* PADRONIZA OS PARÂMETROS MERCADORIA E VALOR COM SUAS DEVIDAS CONFIGURAÇÕES */
+/* PADRONIZA OS PARÂMETROS MERCADORIA E VALOR COM SUAS DEVIDAS CONFIGURAÇÕES. */
 .extratos {
   display: flex;
   justify-content: space-between;
@@ -24,7 +24,7 @@ E "EXTRATO DE TRANSAÇÕES" UM DO LADO DO OUTRO */
   border-bottom: 1px solid var(--cor-4);
 }
 
-/* PADRONIZA OS PARÂMETROS DAS MERCADORIAS */
+/* PADRONIZA OS PARÂMETROS DAS MERCADORIAS .*/
 .mercadorias {
   display: flex;
   justify-content: space-between;
@@ -33,16 +33,16 @@ E "EXTRATO DE TRANSAÇÕES" UM DO LADO DO OUTRO */
   /*  background: url(../../assets/img/+.svg) no-repeat 23px 11px; */
 }
 
-/* ADICIONA O ÍCONE + QUANDO O TIPO DE TRANSAÇÃO É UMA VENDA */
+/* ADICIONA O ÍCONE + QUANDO O TIPO DE TRANSAÇÃO É UMA VENDA. */
 .venda {
   background: url(../../assets/img/+.svg) no-repeat 23px 11px;
 }
-/* ADICIONA O ÍCONE - QUANDO O TIPO DE TRANSAÇÃO É COMPRA  */
+/* ADICIONA O ÍCONE - QUANDO O TIPO DE TRANSAÇÃO É COMPRA . */
 .compra {
   background: url(../../assets/img/-.svg) no-repeat 23px 15px;
 }
 
-/* PADRONIZA OS PARÂMETROS DO VALOR TOTAL */
+/* PADRONIZA OS PARÂMETROS DO VALOR TOTAL.*/
 .total {
   display: flex;
   justify-content: space-between;
@@ -51,7 +51,7 @@ E "EXTRATO DE TRANSAÇÕES" UM DO LADO DO OUTRO */
   border-top: 1px solid var(--cor-4);
 }
 
-/* PADRONIZA OS PARÂMETROS DO LUCRO */
+/* PADRONIZA OS PARÂMETROS DO LUCRO. */
 .lucro {
   display: flex;
   justify-content: flex-end;

@@ -1,7 +1,5 @@
-body {
-  margin: 0px;
-}
-
+/* RESETA TODOS ESSES ITENS PARA QUE NÃO TENHAM NENHUMA MARGEM. */
+body,
 h1,
 h2,
 h3,
@@ -14,16 +12,19 @@ dd {
   margin: 0px;
 }
 
+/* RESETA O PADDING DA LISTA E TIRA O ESTILO DELA. */
 ul {
   padding: 0px;
   list-style: none;
 }
 
+/* REMOVE A COR PADRÃO DOS LINKS. */
 a {
   text-decoration: none;
   color: inherit;
 }
 
+/* DEIXA A IMAGEM COM SEU TAMANHO DE 100%, QUE CRESÇA DE ACORDO COM SEU TAMANHO E TENHA A BORDA DE 4PX. */
 img {
   max-width: 100%;
   /* height: auto; significa que ele irá crescer de acordo com o tamanho da imagem
@@ -33,6 +34,7 @@ img {
   border-radius: 4px;
 }
 
+/* TODA VEZ QUE UMA IMAGEM QUE TIVER O FORMATO DE JPG IRÁ TER UMA BORDA DE 4PX. */
 img [src$=".jpg"] {
   border-radius: 4px;
 }

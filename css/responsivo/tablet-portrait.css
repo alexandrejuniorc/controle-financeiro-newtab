@@ -22,8 +22,7 @@
   .mercadoria {
     justify-content: center;
   }
-  .opcoes:nth-child(1) {
-  }
+
   /* O CONTEÚDO QUE UTILIZAR ESSA VARIÁVEL IRÁ OCUPAR 25% DO BACKGROUND ESTABELECIDO. */
   .short {
     width: 25%;

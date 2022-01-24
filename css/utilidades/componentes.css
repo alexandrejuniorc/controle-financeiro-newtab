@@ -24,10 +24,7 @@
   margin-right: auto;
 }
 
-.container3 {
-  min-width: 252px;
-}
-
+/* PARÂMETROS DE BOTÃO PARA QUE POSSA COLOCAR SOMENTE BOTAO EM UMA CLASSE QUE JÁ IRÁ ESTAR CONFIGURADO. */
 .botao {
   display: flex;
   max-width: auto;

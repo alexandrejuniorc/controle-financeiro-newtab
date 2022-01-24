@@ -1,17 +1,17 @@
-/* DEIXA O TAMANHO DO HTML EM 100% */
+/* DEIXA O TAMANHO DO HTML EM 100% .*/
 html {
   height: 100%;
   min-height: 100%;
 }
 
-/* FAZ O BODY FICAR MALEÁVEL E DEIXA ELE COM O TAMANHO 100% */
+/* FAZ O BODY FICAR MALEÁVEL E DEIXA ELE COM O TAMANHO 100% .*/
 body {
   display: flex;
   flex-direction: column;
   min-height: 100%;
 }
 
-/* POSICIONA O FOOTER NA POSIÇÃO CORRETA */
+/* POSICIONA O FOOTER NA POSIÇÃO CORRETA. */
 footer {
   margin-top: auto;
   border: 8px solid var(--cor-1);

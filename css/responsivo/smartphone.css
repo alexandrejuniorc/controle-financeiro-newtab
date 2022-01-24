@@ -39,7 +39,7 @@
     margin: 0 20px;
   }
 
-  /* DEIXA O BOTÃO COM O MESMO TAMANHO DE FORMULARIO-DADOS */
+  /* DEIXA O BOTÃO COM O MESMO TAMANHO DE FORMULARIO-DADOS.*/
   .botao {
     width: 100%;
   }
@@ -50,7 +50,7 @@
     padding: 0;
   }
 
-  /* DA UMA MARGEM AO EXTRATO PARA QUE NÃO FIQUE COLADO NOS CANTOS  */
+  /* DA UMA MARGEM AO EXTRATO PARA QUE NÃO FIQUE COLADO NOS CANTOS.  */
   .extrato-dados {
     margin: 20px;
   }
