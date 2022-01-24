@@ -24,6 +24,10 @@
   margin-right: auto;
 }
 
+.container3 {
+  min-width: 252px;
+}
+
 .botao {
   display: flex;
   max-width: auto;

@@ -65,10 +65,14 @@
     text-align: right;
   }
 
-  .header-menu li {
+  /* .header-menu li {
     padding: 0 20px 7px 20px;
     height: 32px;
-  }
+  } */
+
+  /* .item-menu {
+    width: 100%;
+  } */
 
   .header-menu .divisor-menu {
     display: none;
@@ -90,8 +94,34 @@
     display: flex;
   }
 
+  .boxMenu:hover .header-menu a:hover {
+    background: #fff;
+    color: var(--cor-0);
+  }
+
+  /* COLOCAR O FECHAR-MENU NA POSIÇÃO DESEJADA. */
   .fecha-menu {
-    margin: 20px 20px 26px 20px;
+    display: flex;
+    margin: 20px 90% 20px 20px;
+  }
+
+  /* FAZ COM QUE O BACKGROUND DO ITEM-MENU PEGUE DE PONTA A PONTA DE ACORDO COM O WIDTH DESEJADO. */
+  .item-menu {
+    width: 252px;
+    min-width: 100%;
+    margin-left: 0;
+    padding: 0;
+  }
+
+  .item-menu a {
+    width: 100%;
+    justify-content: right;
+    padding: 7px 20px 7px 20px;
+  }
+
+  /* TIRA O PADDING DOS TEXTOS PARA MELHOR COMPORTAMENTO NO LAYOUT MOBILE. */
+  .header h2 {
+    padding-left: 0;
   }
 }
 

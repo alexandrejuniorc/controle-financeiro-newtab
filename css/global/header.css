@@ -17,42 +17,34 @@
   align-items: center;
 }
 
-.header h2 {
-  padding-left: 20px;
-}
-
 .img {
   min-width: max-content;
 }
 
+/* ESTILIZA O MENU COM A COR E  */
 .header-menu {
   background: var(--cor-2);
   display: flex;
-  flex-wrap: wrap;
-  /*   align-items: center; */
+  /*  flex-wrap: wrap; */
 }
 
-/* nav {
-  padding: 4px 20px 4px 20px;
-  background: #fff;
-}
-
-nav .ul {
-  margin: 0 20px;
-} */
-
-.header-menu li {
-  padding: 4px 20px 4px 20px;
-  height: 32px;
+/* ESTILIZA O MENU DE ACORDO COM O DESIGN */
+.item-menu {
+  padding: 8px 10px;
   align-items: center;
   display: flex;
+  text-align: center;
 }
 
-/* .header-menu ul {
-  padding: 4px 20px 4px 20px;
-} */
-
+/* COLOCA O DIVISOR NO MEIO DO BACKGROUND DO MENU */
 .divisor-menu {
   display: flex;
   align-items: center;
+}
+
+/* ESTILIZA O DIVISOR COM UMA BORDA, DE ACORDO COM O DESIGN PROPOSTO */
+.divisor-conteudo {
+  width: 20px;
+  border: 1px solid var(--cor-4);
+  transform: rotate(90deg);
 }
