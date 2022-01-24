@@ -73,13 +73,14 @@
   }
 
   /* TIRA O PADDING DOS TEXTOS PARA MELHOR COMPORTAMENTO NO LAYOUT MOBILE. */
-  .header h2 {
+  .titulo-header {
     padding-left: 0;
+    padding-right: 0;
   }
 
   /* FAZ COM QUE O BACKGROUND DO ITEM-MENU PEGUE DE PONTA A PONTA DE ACORDO COM O WIDTH DESEJADO. */
   .item-menu {
-    width: 351px;
+    max-width: fit-content;
     min-width: 100%;
     margin-left: 0;
     padding: 0;
