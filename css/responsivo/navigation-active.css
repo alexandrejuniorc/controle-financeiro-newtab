@@ -1,0 +1,66 @@
+@media screen and (max-width: 768px) {
+  /* TIRA O PADDING DOS TEXTOS PARA MELHOR COMPORTAMENTO NO LAYOUT MOBILE. */
+  .header h2 {
+    padding-left: 0;
+  }
+
+  /* POSICIONA O MENU DO CABEÇALHO NA PARTE INFERIOR DIREITA PARA QUE POSSA SE ADEQUAR DE ACORDO COM O DESIGN. */
+  .header-menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    flex-direction: column;
+    height: 100%;
+    background-color: var(--cor-1);
+    color: var(--cor-2);
+    text-align: right;
+  }
+
+  /* REMOVE O DIVISOR DO MENU QUE FICA NO LAYOUT PARA DESKTOP. */
+  .header-menu .divisor-menu {
+    display: none;
+  }
+
+  /* GERA UMA CAIXA DE ELEMENTO DE BLOCO. */
+  .hamburguer,
+  .fecha-menu {
+    display: block;
+  }
+
+  /* FAZ COM QUE O MENU FIQUE DESATIVADO PARA QUE ATIVE SOMENTE QUANDO FOR UTILIZADO O HOVER. */
+  .header-menu {
+    display: none;
+  }
+
+  /* FAZ COM QUE O MENU SE ABRA E FIQUE ATIVO AO PASSAR O MOUSE POR CIMA DO MENU-HAMBURGUER. */
+  .boxMenu:hover .header-menu {
+    display: flex;
+  }
+
+  /* ADICIONA UM HOVER PARA QUANDO VOCÊ PASSAR O MOUSE POR CIMA DE UM ITEM DO MENU-HAMBURGUER QUE ELE MUDE DE COR. */
+  .boxMenu:hover .header-menu a:hover {
+    background: #fff;
+    color: var(--cor-0);
+  }
+
+  /* COLOCAR O FECHAR-MENU NA POSIÇÃO DESEJADA. */
+  .fecha-menu {
+    display: flex;
+    margin: 20px 90% 20px 20px;
+  }
+
+  /* FAZ COM QUE O BACKGROUND DO ITEM-MENU PEGUE DE PONTA A PONTA DE ACORDO COM O WIDTH DESEJADO. */
+  .item-menu {
+    width: 252px;
+    min-width: 100%;
+    margin-left: 0;
+    padding: 0;
+  }
+
+  /* FAZ COM QUE OS LINKS PEGUEM DE PONTA A PONTA DO MENU SE ALINHANDO A DIREITA E COM O PADDING PROPOSTO NO LAYOUT. */
+  .item-menu a {
+    width: 100%;
+    justify-content: right;
+    padding: 7px 20px 7px 20px;
+  }
+}

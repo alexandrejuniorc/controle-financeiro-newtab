@@ -1,43 +1,34 @@
 @media screen and (max-width: 768px) {
-  /* .header nav {
-    display: none;
-  } */
+  /* NOVA TRANSAÇÃO */
 
-  /*  .titulo-header {
-    margin-left: auto;
-  } */
-
-  /* FAZ O LAYOUT QUEBRAR EM COLUNA PRA FICAR UM EM BAIXO DO OUTRO */
+  /* FAZ O LAYOUT QUEBRAR EM COLUNA PRA FICAR UM EM BAIXO DO OUTRO. */
   .transacao {
     flex-direction: column;
   }
-  /* DEIXA O BACKGROUND DO FORMULÁRIO COM O MESMO TAMANHO DA TELA */
-  /*  .formulario-bg {
-    width: 100%;
-    padding: none;
-  } */
-  /* FAZ O CONTEÚDO DO FORMULÁRIO FICAR EM FILEIRA */
+
+  /* FAZ O CONTEÚDO DO FORMULÁRIO FICAR EM FILEIRA. */
   .formulario-dados {
     flex-direction: row;
     width: 100%;
   }
-  /* FAZ O BOTÃO FICAR COM 200PX */
+  /* FAZ O BOTÃO FICAR COM 200PX. */
   .botao {
     display: flex;
     justify-content: right;
     width: 200px;
   }
+
+  /* CENTRALIZA TODOS OS CAMPOS DA "NOVA TRANSAÇÃO" PARA QUE PERMANEÇAM NO CENTRO QUANDO OCORRER A DIMINUIÇÃO DA TELA. */
   .mercadoria {
     justify-content: center;
   }
   .opcoes:nth-child(1) {
   }
-  /* O CONTEÚDO QUE UTILIZAR ESSA VARIÁVEL IRÁ OCUPAR 25% DO BACKGROUND ESTABELECIDO */
+  /* O CONTEÚDO QUE UTILIZAR ESSA VARIÁVEL IRÁ OCUPAR 25% DO BACKGROUND ESTABELECIDO. */
   .short {
     width: 25%;
-    /*   width: 150px; */
   }
-  /* O CONTEÚDO QUE UTILIZAR ESSA VARIÁVEL IRÁ OCUPAR 50% DO BACKGROUND ESTABELECIDO  */
+  /* O CONTEÚDO QUE UTILIZAR ESSA VARIÁVEL IRÁ OCUPAR 50% DO BACKGROUND ESTABELECIDO . */
   .long {
     width: 50%;
     margin: 0 20px;
@@ -45,94 +36,30 @@
 
   /* EXTRATO */
 
-  /* DÁ A MARGEM PRA SEPARAR "EXTRATO DE TRANSAÇÕES" DE "NOVA TRANSAÇÃO" */
+  /* DÁ A MARGEM PRA SEPARAR "EXTRATO DE TRANSAÇÕES" DE "NOVA TRANSAÇÃO". */
   .extrato-bg {
     margin-top: 20px;
   }
 
+  /* REMOVE A BORDA DO MENU ONDE FICA O MENU-HAMBURGUER. */
   .boxMenu {
     border: 0;
-  }
-
-  .header-menu {
-    position: fixed;
-    top: 0;
-    right: 0;
-    flex-direction: column;
-    height: 100%;
-    background-color: var(--cor-1);
-    color: var(--cor-2);
-    text-align: right;
-  }
-
-  /* .header-menu li {
-    padding: 0 20px 7px 20px;
-    height: 32px;
-  } */
-
-  /* .item-menu {
-    width: 100%;
-  } */
-
-  .header-menu .divisor-menu {
-    display: none;
-  }
-  .hamburguer,
-  .fecha-menu {
-    display: block;
-  }
-
-  .header-menu {
-    display: none;
-  }
-
-  /*  .header-menu li {
-    padding: 20px 20px;
-  }
- */
-  .boxMenu:hover .header-menu {
-    display: flex;
-  }
-
-  .boxMenu:hover .header-menu a:hover {
-    background: #fff;
-    color: var(--cor-0);
-  }
-
-  /* COLOCAR O FECHAR-MENU NA POSIÇÃO DESEJADA. */
-  .fecha-menu {
-    display: flex;
-    margin: 20px 90% 20px 20px;
-  }
-
-  /* FAZ COM QUE O BACKGROUND DO ITEM-MENU PEGUE DE PONTA A PONTA DE ACORDO COM O WIDTH DESEJADO. */
-  .item-menu {
-    width: 252px;
-    min-width: 100%;
-    margin-left: 0;
-    padding: 0;
-  }
-
-  .item-menu a {
-    width: 100%;
-    justify-content: right;
-    padding: 7px 20px 7px 20px;
-  }
-
-  /* TIRA O PADDING DOS TEXTOS PARA MELHOR COMPORTAMENTO NO LAYOUT MOBILE. */
-  .header h2 {
-    padding-left: 0;
   }
 }
 
 @media screen and (max-width: 597px) {
+  /* ZERA O PADDING PARA QUE NÃO OCORRA BUGS NO LAYOUT. */
   .formlario-bg {
     padding: 0;
   }
+
+  /* FAZ COM QUE O LAYOUT PERMANEÇA CENTRALIZADO NESSE PIXEL ONDE OCORRE UMA QUEBRA. */
   .formulario-dados {
     justify-content: center;
   }
-  .formulario-dados .mercadoria:nth-child(1) {
+
+  /* COLOCA UMA MARGEM NA CATEGORIA "TIPO DE TRANSAÇÃO" POIS ELA TEM UMA QUEBRA QUE ACABA ESTRAGANDO O LAYOUT. */
+  .formulario-dados .mercadoria:first-child {
     margin: 0 0 20px 0;
   }
 }

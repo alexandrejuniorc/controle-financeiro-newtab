@@ -1,9 +1,12 @@
+/* ESTILIZA O CABEÇALHO COM A COR E A MARGEM DE ACORDO COM O DESIGN */
 .header-bg {
   display: flex;
   justify-content: center;
   background-color: var(--cor-3);
   padding: 20px 0 20px 0;
 }
+
+/* FAZ A QUEBRA DOS ITENS PARA QUE FIQUEM NA MESMA LINHA E PADRONIZA COM OS PARÂMETROS DE ACORDO COM O DESIGN */
 .header {
   display: flex;
   width: 100%;
@@ -12,13 +15,10 @@
   padding: 4px 20px 4px 20px;
 }
 
+/* FAZ COM QUE OS LINKS DO CABEÇALHO FIQUEM MALEÁVEIS AO CAMINHAR DO PROJETO */
 .header a {
   display: flex;
   align-items: center;
-}
-
-.img {
-  min-width: max-content;
 }
 
 /* ESTILIZA O MENU COM A COR E  */
