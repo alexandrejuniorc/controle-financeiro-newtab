@@ -15,6 +15,8 @@
     <title>Controle Financeiro</title>
   </head>
   <body>
+    <!-- CABEÇALHO -->
+
     <header class="header-bg">
       <div class="header container">
         <a href="./">
@@ -36,6 +38,9 @@
               </a>
             </div>
           </div>
+
+          <!-- MENU DO CABEÇALHO -->
+
           <nav aria-label="primaria">
             <ul class="header-menu font-menu cor-1">
               <div class="fecha-menu">
@@ -59,16 +64,17 @@
       </div>
     </header>
 
-    <!-- CONTEÚDO DO PÁGINA -->
+    <!-- CONTEÚDO DO PÁGINA - NOVA TRANSAÇÃO. -->
 
     <main>
       <div class="transacao container">
-        <!-- MANTÉM TODO O LAYOUT DA PÁGINA -->
         <section class="formulario-bg">
           <h1 class="font-g cor-0" style="margin: 0 0 20px 0">
             Nova transação
           </h1>
           <div class="formulario-dados container">
+            <!-- TIPO DE TRANSAÇÃO ONDE TERÁ UMA BARRA COM MAIS DE UM ITEM PRA SELECIONAR SOMENTE UM. -->
+
             <div class="mercadoria short">
               <label class="font-p">Tipo de transação</label>
               <select class="opcoes font-p">
@@ -78,6 +84,7 @@
               </select>
             </div>
 
+            <!-- NOME DA MERCADORIA ONDE POSSUI SOMENTE UM INPUT DO TIPO TEXT. -->
             <div class="mercadoria long font-p">
               <label for="name">Nome da mercadoria</label>
               <input
@@ -89,6 +96,8 @@
                 placeholder="Mercadoria"
               />
             </div>
+
+            <!-- VALOR DA MERCADORIA ONDE POSSUI UM INPUT DO TIPO NUMBER. -->
             <div class="mercadoria short font-p">
               <label for="valor">Valor</label>
               <input
@@ -100,6 +109,8 @@
               />
             </div>
           </div>
+
+          <!-- BOTÃO DA SEÇÃO "NOVA TRANSAÇÃO" -->
           <div class="tBotao">
             <button class="botao font-p-inter" href="#">
               Adicionar transação
@@ -107,15 +118,21 @@
           </div>
         </section>
 
+        <!-- FOI FEITO UMA CLASSE DE DIVISÃO PARA QUE POSSA SER ESTILIZADA E SE COMPORTAR DE ACORDO COM O CSS RESPONSIVO. -->
         <div class="divisao"></div>
 
+        <!-- CONTEÚDO DA PÁGINA - EXTRATO DE TRANSAÇÕES. -->
         <div class="extrato-bg">
           <section class="extrato-dados" aria-label="Extrato">
             <h1 class="font-g">Extrato de transações</h1>
+
+            <!-- PARTE ONDE FICA OS TIPOS DO EXTRATO QUE NESSE CONTEXTO SÃO MERCADORIA E VALOR. -->
             <div class="extratos font-total-valor container">
               <p style="padding: 0 20px">Mercadoria</p>
               <p>Valor</p>
             </div>
+
+            <!-- MERCADORIA 1 -->
             <div class="mercadorias venda font-mercadorias">
               <p>
                 Lorem ipsum dolor sit amet <br />
@@ -123,18 +140,26 @@
               </p>
               <p>R$ 12.999,99</p>
             </div>
+
+            <!-- MERCADORIA 2 -->
             <div class="mercadorias compra font-mercadorias">
               <p>Quis nostrud exercitation</p>
               <p>R$ 99,99</p>
             </div>
+
+            <!-- MERCADORIA 3 -->
             <div class="mercadorias venda font-mercadorias">
               <p>Lorem ipsum</p>
               <p>R$ 9,99</p>
             </div>
+
+            <!-- PARTE CRIADA PARA MOSTRAR O RESULTADO TOTAL DO EXTRATO. -->
             <div class="total">
               <p class="font-total">Total</p>
               <p class="font-total-valor">R$ 12.909,99</p>
             </div>
+
+            <!-- PARTE CRIADA PARA QUE POSSA MOSTRAR SOMENTE O LUCRO QUE OBTEVE. -->
             <div class="lucro font-lucro">
               <p>[LUCRO]</p>
             </div>
@@ -142,6 +167,8 @@
         </div>
       </div>
     </main>
+
+    <!-- RODAPÉ -->
     <footer class="footer-bg">
       <div class="footer"></div>
     </footer>
