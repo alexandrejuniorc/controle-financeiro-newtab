@@ -55,6 +55,11 @@
     padding: 19px 20px 0 10px;
   }
 
+  /* POSICIONA O PRIMEIRO CONTEÚDO DE EXTRATOS QUE SERIA "MERCADORIA". */
+  .extratos p:first-child {
+    padding: 0;
+  }
+
   /* DA UMA MARGEM AO EXTRATO PARA QUE NÃO FIQUE COLADO NOS CANTOS.  */
   .extrato-dados {
     margin: 20px;

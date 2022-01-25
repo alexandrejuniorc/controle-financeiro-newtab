@@ -35,6 +35,11 @@
 
   /* EXTRATO */
 
+  /* POSICIONA O PRIMEIRO CONTEÚDO DE EXTRATOS QUE SERIA "MERCADORIA". */
+  .extratos p:first-child {
+    padding: 0 20px;
+  }
+
   /* DÁ A MARGEM PRA SEPARAR "EXTRATO DE TRANSAÇÕES" DE "NOVA TRANSAÇÃO". */
   .extrato-bg {
     margin-top: 20px;
