@@ -50,6 +50,11 @@
     padding: 0;
   }
 
+  /* CONFIGURA O PADDING PARA QUE O TIPO "MERCADORIA" FIQUE ALINHADO COM OS ITENS ABAIXO. */
+  .extratos {
+    padding: 19px 20px 0 10px;
+  }
+
   /* DA UMA MARGEM AO EXTRATO PARA QUE NÃO FIQUE COLADO NOS CANTOS.  */
   .extrato-dados {
     margin: 20px;
