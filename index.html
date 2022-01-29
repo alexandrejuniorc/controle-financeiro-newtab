@@ -68,7 +68,12 @@
 
     <main>
       <div class="transacao container">
-        <section class="formulario-bg">
+        <form
+          class="formulario-bg"
+          id="formulario"
+          method="post"
+          onsubmit="validacao(event)"
+        >
           <h1 class="font-g cor-0" style="margin: 0 0 20px 0">
             Nova transação
           </h1>
@@ -77,8 +82,8 @@
 
             <div class="mercadoria short">
               <label class="font-p">Tipo de transação</label>
-              <select class="opcoes font-p">
-                <option value="">Selecione</option>
+              <select class="opcoes font-p" id="selecione">
+                <option value="selecione">Selecione</option>
                 <option value="compra">Compra</option>
                 <option value="venda">Venda</option>
               </select>
@@ -91,8 +96,7 @@
                 class="font-p"
                 type="text"
                 name="name"
-                required
-                id="name"
+                id="nome"
                 placeholder="Mercadoria"
               />
             </div>
@@ -101,9 +105,10 @@
             <div class="mercadoria short font-p">
               <label for="valor">Valor</label>
               <input
-                type="number"
+                type="text"
                 name="valor"
-                required
+                onkeypress="campoValor(event)"
+                onfocus="this.value = ''"
                 id="valor"
                 placeholder="R$ 0,00"
               />
@@ -112,11 +117,13 @@
 
           <!-- BOTÃO DA SEÇÃO "NOVA TRANSAÇÃO" -->
           <div class="tBotao">
-            <button class="botao font-p-inter" href="#">
-              Adicionar transação
-            </button>
+            <input
+              class="botao font-p-inter"
+              type="submit"
+              value="Adicionar transação"
+            />
           </div>
-        </section>
+        </form>
 
         <!-- FOI FEITO UMA CLASSE DE DIVISÃO PARA QUE POSSA SER ESTILIZADA E SE COMPORTAR DE ACORDO COM O CSS RESPONSIVO. -->
         <div class="divisao"></div>
@@ -124,45 +131,30 @@
         <!-- CONTEÚDO DA PÁGINA - EXTRATO DE TRANSAÇÕES. -->
         <div class="extrato-bg">
           <section class="extrato-dados" aria-label="Extrato">
-            <h1 class="font-g">Extrato de transações</h1>
+            <table style="width: 100%" class="lista" id="goExtrato">
+              <tr>
+                <td style="text-align: center" class="font-g">
+                  Extrato de transações
+                </td>
+              </tr>
 
-            <!-- PARTE ONDE FICA OS TIPOS DO EXTRATO QUE NESSE CONTEXTO SÃO MERCADORIA E VALOR. -->
-            <div class="extratos font-total-valor container">
-              <p>Mercadoria</p>
-              <p>Valor</p>
-            </div>
+              <!-- PARTE ONDE FICA OS TIPOS DO EXTRATO QUE NESSE CONTEXTO SÃO MERCADORIA E VALOR. -->
+              <tr class="extratos font-total-valor container">
+                <td>Mercadoria</td>
+                <td>Valor</td>
+              </tr>
 
-            <!-- MERCADORIA 1 -->
-            <div class="mercadorias venda font-mercadorias">
-              <p>
-                Lorem ipsum dolor sit amet <br />
-                consectetur
-              </p>
-              <p>R$ 12.999,99</p>
-            </div>
+              <!-- PARTE CRIADA PARA MOSTRAR O RESULTADO TOTAL DO EXTRATO. -->
+              <tr class="total">
+                <td class="font-total">Total</td>
+                <td class="font-total-valor">R$ 12.909,99</td>
+              </tr>
 
-            <!-- MERCADORIA 2 -->
-            <div class="mercadorias compra font-mercadorias">
-              <p>Quis nostrud exercitation</p>
-              <p>R$ 99,99</p>
-            </div>
-
-            <!-- MERCADORIA 3 -->
-            <div class="mercadorias venda font-mercadorias">
-              <p>Lorem ipsum</p>
-              <p>R$ 9,99</p>
-            </div>
-
-            <!-- PARTE CRIADA PARA MOSTRAR O RESULTADO TOTAL DO EXTRATO. -->
-            <div class="total">
-              <p class="font-total">Total</p>
-              <p class="font-total-valor">R$ 12.909,99</p>
-            </div>
-
-            <!-- PARTE CRIADA PARA QUE POSSA MOSTRAR SOMENTE O LUCRO QUE OBTEVE. -->
-            <div class="lucro font-lucro">
-              <p>[LUCRO]</p>
-            </div>
+              <!-- PARTE CRIADA PARA QUE POSSA MOSTRAR SOMENTE O LUCRO QUE OBTEVE. -->
+              <tr class="lucro font-lucro">
+                <td>[LUCRO]</td>
+              </tr>
+            </table>
           </section>
         </div>
       </div>
@@ -172,5 +164,6 @@
     <footer class="footer-bg">
       <div class="footer"></div>
     </footer>
+    <script src="./assets/js/script.js"></script>
   </body>
 </html>
