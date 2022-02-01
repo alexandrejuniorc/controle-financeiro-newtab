@@ -1,11 +1,14 @@
 var listaExtrato = [];
 
+//localStorage
 if (listaExtrato !== null) {
   var listaStorage = localStorage.getItem("lista");
-  console.log("listaStorage", JSON.parse(listaStorage));
+  console.log("listaStorage", listaStorage);
 
-  //mantém o conteúdo já salvo na localStorage
-  var lista = JSON.parse(listaStorage);
+  var listaObjeto = JSON.parse(listaStorage); //transforma as strings em objeto novamente
+  console.log("listaStorage", listaObjeto);
+
+  listaExtrato = JSON.parse(listaStorage);
 }
 
 //validação do formulário
@@ -69,4 +72,22 @@ function campoValor(e) {
   if (/[0-9]/g.test(e.key) && e.target.value.length < 8) {
     e.target.value += e.key;
   }
+}
+
+var produtos = [{}];
+
+for (produto in produtos) {
+  //innerHTML é o conteúdo que está dentro da tag
+  document.querySelector("table.lista tbody").innerHTML += `
+      <tr class="mercadorias venda font-mercadorias">
+        <td>
+          ${produtos[produto].name}
+        </td>
+          <td>
+          ${produtos[produto].valor}
+          </td>
+      </tr>
+`;
+
+  console.log(produtos[produto]);
 }
