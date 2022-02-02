@@ -36,6 +36,16 @@
   text-align: center;
 }
 
+.item-menu button {
+  width: 100%;
+  border: none;
+  background: none;
+}
+
+.item-menu:hover {
+  background: var(--cor-4);
+}
+
 /* COLOCA O DIVISOR NO MEIO DO BACKGROUND DO MENU */
 .divisor-menu {
   display: flex;
@@ -43,8 +53,8 @@
 }
 
 /* ESTILIZA O DIVISOR COM UMA BORDA, DE ACORDO COM O DESIGN PROPOSTO */
-.divisor-conteudo {
+/* .divisor-conteudo {
   width: 20px;
   border: 1px solid var(--cor-4);
-  transform: rotate(90deg);
 }
+ */
