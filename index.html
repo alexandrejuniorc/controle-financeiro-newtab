@@ -56,7 +56,9 @@
               </div>
 
               <li class="item-menu">
-                <a class="font-menu" href="#">Limpar dados</a>
+                <button onclick="limparDados()" class="font-menu" href="#">
+                  Limpar dados
+                </button>
               </li>
             </ul>
           </nav>
@@ -132,43 +134,24 @@
         <div class="extrato-bg">
           <section class="extrato-dados" aria-label="Extrato">
             <table style="width: 100%" class="lista" id="lista">
-              <tr>
-                <td style="text-align: center" class="font-g">
-                  Extrato de transações
-                </td>
-              </tr>
+              <tbody>
+                <tr>
+                  <td style="text-align: center" class="font-g">
+                    Extrato de transações
+                  </td>
+                </tr>
 
-              <!-- PARTE ONDE FICA OS TIPOS DO EXTRATO QUE NESSE CONTEXTO SÃO MERCADORIA E VALOR. -->
-              <tr class="extratos font-total-valor container">
-                <td id="name">Mercadoria</td>
-                <td id="valor">Valor</td>
-              </tr>
+                <!-- PARTE ONDE FICA OS TIPOS DO EXTRATO QUE NESSE CONTEXTO SÃO MERCADORIA E VALOR. -->
+                <tr class="extratos font-total-valor container">
+                  <td id="name">Mercadoria</td>
+                  <td id="valor">Valor</td>
+                </tr>
 
-              <!-- MERCADORIA 1 -->
-              <!--   <tr class="mercadorias venda font-mercadorias">
-                <td>
-                  Lorem ipsum dolor sit amet <br />
-                  consectetur
-                </td>
-                <td>R$ 12.999,99</td>
-              </tr> -->
-
-              <!-- MERCADORIA 2 -->
-              <!--  <tr class="mercadorias compra font-mercadorias">
-                <td>Quis nostrud exercitation</td>
-                <td>R$ 99,99</td>
-              </tr> -->
-
-              <!-- MERCADORIA 3 -->
-              <!--  <tr class="mercadorias venda font-mercadorias">
-                <td>Lorem ipsum</td>
-                <td>R$ 9,99</td>
-              </tr>
- -->
-              <!-- PARTE CRIADA PARA MOSTRAR O RESULTADO TOTAL DO EXTRATO. -->
+                <!-- PARTE CRIADA PARA MOSTRAR O RESULTADO TOTAL DO EXTRATO. -->
+              </tbody>
               <tr class="total">
                 <td class="font-total">Total</td>
-                <td class="font-total-valor">R$ 12.909,99</td>
+                <td class="font-total-valor" id="totalValor">R$ 0,00</td>
               </tr>
 
               <!-- PARTE CRIADA PARA QUE POSSA MOSTRAR SOMENTE O LUCRO QUE OBTEVE. -->

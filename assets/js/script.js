@@ -1,7 +1,7 @@
 var listaExtrato = [];
 
 //localStorage
-if (listaExtrato !== null) {
+if (localStorage.getItem("lista") !== null) {
   var listaStorage = localStorage.getItem("lista");
   console.log("listaStorage", listaStorage);
 
@@ -36,9 +36,9 @@ function validacao(e) {
 
   //coloca a variável nomeMercadoria dentro de um objeto da array listaExtrato
   listaExtrato.push({
-    tipoTransacao: tipoTransacao,
-    nomeMercadoria: nomeMercadoria,
-    valorMercadoria: valorMercadoria,
+    tipoTransacao: e.target.elements["selecione"].value,
+    nomeMercadoria: e.target.elements["name"].value,
+    valorMercadoria: e.target.elements["valor"].value.replace(/^.\D/g, ""), //remove todos os dígitos que não sejam números e mantém apenas o ponto, como foi declarado
   });
 
   //transforma os objetos em string
@@ -46,6 +46,8 @@ function validacao(e) {
 
   //localStorage
   localStorage.setItem("lista", listaString);
+
+  desenhaTabela();
 }
 
 //adiciona máscara no campo valor
@@ -73,21 +75,57 @@ function campoValor(e) {
     e.target.value += e.key;
   }
 }
+function desenhaTabela() {
+  linhasAtuais = [
+    ...document.querySelectorAll("table.lista tbody .mercadorias"),
+  ];
 
-var produtos = [{}];
+  document.querySelectorAll(".conteudo").forEach((element) => {
+    element.remove();
+  });
 
-for (produto in produtos) {
-  //innerHTML é o conteúdo que está dentro da tag
-  document.querySelector("table.lista tbody").innerHTML += `
-      <tr class="mercadorias venda font-mercadorias">
+  for (produto in listaExtrato) {
+    //innerHTML é o conteúdo que está dentro da tag
+    document.querySelector("table.lista tbody").innerHTML += `
+      <tr class="mercadorias conteudo ${listaExtrato[produto].tipoTransacao} font-mercadorias"> 
         <td>
-          ${produtos[produto].name}
+          ${listaExtrato[produto].nomeMercadoria}
         </td>
-          <td>
-          ${produtos[produto].valor}
+          <td class="valor-calculado">
+          ${listaExtrato[produto].valorMercadoria}
           </td>
       </tr>
 `;
+    console.log(listaExtrato[produto]);
 
-  console.log(produtos[produto]);
+    //soma todos os valores e da o valor total
+    var valorTotal = document.getElementsByClassName("valor-calculado");
+    var valorCalculado = 0;
+    [].forEach.call(valorTotal, function (e) {
+      valorCalculado += parseInt(e.innerHTML);
+    });
+
+    document.getElementById("totalValor").innerHTML = valorCalculado; //o totalValor será igual o valorCalculado
+
+    if (
+      valorTotal === listaExtrato[produto].valorMercadoria ? ".venda" : false
+    ) {
+      var valorCalculado = 0;
+      [].forEach.call(valorTotal, function (e) {
+        valorCalculado += parseInt(e.innerHTML);
+      });
+
+      document.getElementById("totalValor").innerHTML = valorCalculado;
+    }
+  }
 }
+
+//função para limpar os dados quando clica no botão limpar dados
+function limparDados() {
+  document.querySelectorAll(".conteudo").forEach((element) => {
+    element.remove();
+  });
+  localStorage.clear();
+}
+
+desenhaTabela();
