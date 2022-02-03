@@ -8,22 +8,6 @@
   margin-right: auto;
 }
 
-/* PARÂMETROS DE CONTAINER PARA TIRAR O ESPAÇO DO LADO DIREITO */
-.container1 {
-  box-sizing: border-box;
-  max-width: 1200px;
-  padding-left: 20px;
-  margin-left: auto;
-}
-
-/* PARÂMETROS DE CONTAINER PARA TIRAR O ESPAÇO DO LADO ESQUERDO */
-.container2 {
-  box-sizing: border-box;
-  max-width: 1200px;
-  padding-right: 20px;
-  margin-right: auto;
-}
-
 /* PARÂMETROS DE BOTÃO PARA QUE POSSA COLOCAR SOMENTE BOTAO EM UMA CLASSE QUE JÁ IRÁ ESTAR CONFIGURADO. */
 .botao {
   display: flex;
@@ -42,4 +26,115 @@
   font-weight: 400px;
   font-size: 14px;
   line-height: 22px;
+}
+
+/* CORES */
+
+/* PADRONIZA AS CORES QUE VÃO SER UTILIZADAS NO PROJETO PARA UM USO MAIS FÁCIL E CONTINUO. */
+
+:root {
+  --cor-0: #000000;
+  --cor-1: #333333;
+  --cor-2: #fff;
+  --cor-3: #e0e0e0;
+  --cor-4: #979797;
+  --cor-5: #888888;
+}
+
+.cor-0 {
+  color: var(--cor-0);
+}
+.cor-1 {
+  color: var(--cor-1);
+}
+.cor-2 {
+  color: var(--cor-2);
+}
+.cor-3 {
+  color: var(--cor-3);
+}
+.cor-4 {
+  color: var(--cor-4);
+}
+.cor-5 {
+  color: var(--cor-5);
+}
+
+/* FONTES */
+
+/*  FONTES GLOBAIS   */
+.font-p {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+  font-style: normal;
+}
+
+.font-m {
+  font-family: "Lato", sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  font-style: normal;
+}
+
+.font-g {
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
+  font-style: normal;
+}
+
+/* FONTES DO MENU */
+
+.font-menu {
+  font-family: "Lato", sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19, 2px;
+  font-style: normal;
+  /* font: 600 1rem/1.25 "Lato", sans-serif; */
+}
+
+/* FONTES DO EXTRATO */
+
+.font-total {
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  font-style: normal;
+}
+.font-total-valor {
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 22px;
+  font-style: normal;
+}
+
+.font-lucro {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 22px;
+  font-style: normal;
+}
+
+.font-mercadorias {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  font-style: normal;
+}
+
+.font-p-inter {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+  font-style: normal;
 }
