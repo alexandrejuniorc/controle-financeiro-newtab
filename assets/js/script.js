@@ -75,6 +75,7 @@ function campoValor(e) {
     e.target.value += e.key;
   }
 }
+
 function desenhaTabela() {
   linhasAtuais = [
     ...document.querySelectorAll("table.lista tbody .mercadorias"),
@@ -122,9 +123,13 @@ function desenhaTabela() {
 
 //função para limpar os dados quando clica no botão limpar dados
 function limparDados() {
-  document.querySelectorAll(".conteudo").forEach((element) => {
-    element.remove();
-  });
+  let userConfirma = confirm("Deseja remover todas as transações?");
+
+  if (userConfirma)
+    document.querySelectorAll(".conteudo").forEach((element) => {
+      element.remove();
+    });
+
   localStorage.clear();
 }
 

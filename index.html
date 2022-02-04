@@ -48,9 +48,9 @@
               </div>
 
               <li class="item-menu">
-                <button class="font-menu" href="#">
+                <a class="font-menu" href="#" onclick="fecharSideNav()">
                   Cadastro de transações
-                </button>
+                </a>
               </li>
 
               <div class="divisor-menu">
@@ -58,9 +58,9 @@
               </div>
 
               <li class="item-menu">
-                <button onclick="limparDados()" class="font-menu" href="#">
+                <a onclick="limparDados()" class="font-menu" href="#">
                   Limpar dados
-                </button>
+                </a>
               </li>
             </ul>
           </nav>
@@ -153,7 +153,13 @@
               </tbody>
               <tr class="total">
                 <td class="font-total">Total</td>
-                <td class="font-total-valor" id="totalValor">R$ 0,00</td>
+                <td
+                  class="font-total-valor totalValor"
+                  id="totalValor"
+                  onclick="fecharSideNav()"
+                >
+                  R$ 0,00
+                </td>
               </tr>
 
               <!-- PARTE CRIADA PARA QUE POSSA MOSTRAR SOMENTE O LUCRO QUE OBTEVE. -->

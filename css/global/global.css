@@ -85,14 +85,9 @@ img [src$=".jpg"] {
   text-align: center;
 }
 
-.item-menu button {
-  width: 100%;
-  border: none;
-  background: none;
-}
-
 .item-menu:hover {
-  background: var(--cor-4);
+  background: var(--cor-1);
+  color: white;
 }
 
 /* COLOCA O DIVISOR NO MEIO DO BACKGROUND DO MENU */
