@@ -55,28 +55,41 @@ function campoValor(e) {
   e.preventDefault();
   console.log(e);
 
-  if (e.target.value.length == 0) {
-    e.target.value += "R";
-  }
-
-  if (e.target.value.length == 1) {
-    e.target.value += "$";
-  }
-
-  if (e.target.value.length == 2) {
-    e.target.value += " ";
-  }
-
-  if (e.target.value.length == 5) {
-    e.target.value += ",";
-  }
-
-  if (/[0-9]/g.test(e.key) && e.target.value.length < 8) {
+  if ((/([0-9]{2})$/g, ".$1")) {
     e.target.value += e.key;
   }
+
+  /* if (
+    formatter.format(
+      listaExtrato[produto].valorMercadoria
+        .toString()
+        .replace(/([0-9]{2})$/g, ".$1")
+    )
+  ) {
+    e.target.value += e.key;
+  } */
+
+  /* if (e.target.value.length == 2) {
+    e.target.value += ".";
+  } */
+  /* 
+  if (/[0-9]/g.test(e.key) && e.target.value.length < 5) {
+    e.target.value += e.key;
+  } */
 }
 
+var formatter = new Intl.NumberFormat("pt-BR", {
+  style: "currency",
+  currency: "BRL",
+  // These options are needed to round to whole numbers if that's what you want.
+  //minimumFractionDigits: 0, // (this suffices for whole numbers, but will print 2500.10 as $2,500.1)
+  maximumFractionDigits: 2, // (causes 2500.99 to be printed as $2,501)
+});
+formatter.format(2500);
+
 function desenhaTabela() {
+  var total = 0;
+
   linhasAtuais = [
     ...document.querySelectorAll("table.lista tbody .mercadorias"),
   ];
@@ -86,39 +99,53 @@ function desenhaTabela() {
   });
 
   for (produto in listaExtrato) {
+    if (listaExtrato[produto].tipoTransacao == "compra") {
+      total -= parseFloat(listaExtrato[produto].valorMercadoria);
+    } else {
+      total += parseFloat(listaExtrato[produto].valorMercadoria);
+    }
+
+    console.log(total);
+
     //innerHTML é o conteúdo que está dentro da tag
     document.querySelector("table.lista tbody").innerHTML += `
-      <tr class="mercadorias conteudo ${listaExtrato[produto].tipoTransacao} font-mercadorias"> 
+      <tr class="mercadorias conteudo ${
+        listaExtrato[produto].tipoTransacao
+      } font-mercadorias" id="todasTransacoes"> 
         <td>
           ${listaExtrato[produto].nomeMercadoria}
         </td>
           <td class="valor-calculado">
-          ${listaExtrato[produto].valorMercadoria}
+          ${formatter.format(parseFloat(listaExtrato[produto].valorMercadoria))}
           </td>
       </tr>
 `;
     console.log(listaExtrato[produto]);
+  }
 
-    //soma todos os valores e da o valor total
-    var valorTotal = document.getElementsByClassName("valor-calculado");
+  //soma todos os valores e da o valor total
+  document.getElementById("totalValor").innerHTML = formatter.format(total);
+
+  document.getElementById("lucroTotal").innerHTML =
+    Math.sign(total) > 0 ? "[LUCRO]" : "[PREJUÍZO]";
+
+  /*  var valorTotal = document.getElementsByClassName("valor-calculado"); */
+  /*  var valorCalculado = 0;
+
+  [].forEach.call(valorTotal, function (e) {
+    valorCalculado += parseFloat(e.innerHTML);
+  });
+
+  document.getElementById("totalValor").innerHTML = valorCalculado; //o totalValor será igual o valorCalculado
+
+  if (valorTotal === listaExtrato[produto].valorMercadoria) {
     var valorCalculado = 0;
     [].forEach.call(valorTotal, function (e) {
-      valorCalculado += parseInt(e.innerHTML);
+      valorCalculado += parseFloat(e.innerHTML);
     });
 
-    document.getElementById("totalValor").innerHTML = valorCalculado; //o totalValor será igual o valorCalculado
-
-    if (
-      valorTotal === listaExtrato[produto].valorMercadoria ? ".venda" : false
-    ) {
-      var valorCalculado = 0;
-      [].forEach.call(valorTotal, function (e) {
-        valorCalculado += parseInt(e.innerHTML);
-      });
-
-      document.getElementById("totalValor").innerHTML = valorCalculado;
-    }
-  }
+    document.getElementById("totalValor").innerHTML = valorCalculado;
+  }*/
 }
 
 //função para limpar os dados quando clica no botão limpar dados
@@ -132,5 +159,4 @@ function limparDados() {
 
   localStorage.clear();
 }
-
 desenhaTabela();

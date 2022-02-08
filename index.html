@@ -151,20 +151,18 @@
 
                 <!-- PARTE CRIADA PARA MOSTRAR O RESULTADO TOTAL DO EXTRATO. -->
               </tbody>
-              <tr class="total">
+              <tr class="total" id="todasTransacoes">
                 <td class="font-total">Total</td>
                 <td
                   class="font-total-valor totalValor"
                   id="totalValor"
                   onclick="fecharSideNav()"
-                >
-                  R$ 0,00
-                </td>
+                ></td>
               </tr>
 
               <!-- PARTE CRIADA PARA QUE POSSA MOSTRAR SOMENTE O LUCRO QUE OBTEVE. -->
               <tr class="lucro font-lucro">
-                <td>[LUCRO]</td>
+                <td onkeypress="somaTotal()" id="lucroTotal"></td>
               </tr>
             </table>
           </section>
