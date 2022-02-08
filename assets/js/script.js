@@ -55,27 +55,13 @@ function campoValor(e) {
   e.preventDefault();
   console.log(e);
 
-  if ((/([0-9]{2})$/g, ".$1")) {
-    e.target.value += e.key;
+  if (e.target.value.length == 2) {
+    e.target.value += ".";
   }
 
-  /* if (
-    formatter.format(
-      listaExtrato[produto].valorMercadoria
-        .toString()
-        .replace(/([0-9]{2})$/g, ".$1")
-    )
-  ) {
-    e.target.value += e.key;
-  } */
-
-  /* if (e.target.value.length == 2) {
-    e.target.value += ".";
-  } */
-  /* 
   if (/[0-9]/g.test(e.key) && e.target.value.length < 5) {
     e.target.value += e.key;
-  } */
+  }
 }
 
 var formatter = new Intl.NumberFormat("pt-BR", {
