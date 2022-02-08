@@ -114,35 +114,18 @@ function desenhaTabela() {
 
   document.getElementById("lucroTotal").innerHTML =
     Math.sign(total) > 0 ? "[LUCRO]" : "[PREJUÍZO]";
-
-  /*  var valorTotal = document.getElementsByClassName("valor-calculado"); */
-  /*  var valorCalculado = 0;
-
-  [].forEach.call(valorTotal, function (e) {
-    valorCalculado += parseFloat(e.innerHTML);
-  });
-
-  document.getElementById("totalValor").innerHTML = valorCalculado; //o totalValor será igual o valorCalculado
-
-  if (valorTotal === listaExtrato[produto].valorMercadoria) {
-    var valorCalculado = 0;
-    [].forEach.call(valorTotal, function (e) {
-      valorCalculado += parseFloat(e.innerHTML);
-    });
-
-    document.getElementById("totalValor").innerHTML = valorCalculado;
-  }*/
 }
 
 //função para limpar os dados quando clica no botão limpar dados
 function limparDados() {
   let userConfirma = confirm("Deseja remover todas as transações?");
 
-  if (userConfirma)
+  if (userConfirma) {
     document.querySelectorAll(".conteudo").forEach((element) => {
       element.remove();
     });
-
-  localStorage.clear();
+    localStorage.clear();
+    listaExtrato = [];
+  }
 }
 desenhaTabela();
