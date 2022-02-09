@@ -76,13 +76,17 @@ formatter.format(2500);
 function desenhaTabela() {
   var total = 0;
 
-  linhasAtuais = [
-    ...document.querySelectorAll("table.lista tbody .mercadorias"),
-  ];
-
-  document.querySelectorAll(".conteudo").forEach((element) => {
+  document.querySelectorAll("#todasTransacoes > *").forEach((element) => {
     element.remove();
   });
+
+  if (listaExtrato.length === 0) {
+    document.getElementById("todasTransacoes").innerHTML += `
+    <tr>
+      <td class="nenhumaTransacao font-p" >Nenhuma transação cadastrada.</td>
+    </tr>
+    `;
+  }
 
   for (produto in listaExtrato) {
     if (listaExtrato[produto].tipoTransacao == "compra") {
@@ -91,13 +95,12 @@ function desenhaTabela() {
       total += parseFloat(listaExtrato[produto].valorMercadoria);
     }
 
-    console.log(total);
-
     //innerHTML é o conteúdo que está dentro da tag
     document.querySelector("table.lista tbody").innerHTML += `
-      <tr class="mercadorias conteudo ${
-        listaExtrato[produto].tipoTransacao
-      } font-mercadorias" id="todasTransacoes"> 
+      <tr class="tabelaLinha d-flex">
+    <tr class="mercadorias conteudo d-flex ${
+      listaExtrato[produto].tipoTransacao
+    } font-mercadorias" id="todasTransacoes"> 
         <td>
           ${listaExtrato[produto].nomeMercadoria}
         </td>
@@ -105,17 +108,35 @@ function desenhaTabela() {
           ${formatter.format(parseFloat(listaExtrato[produto].valorMercadoria))}
           </td>
       </tr>
+      </tr>
+ 
 `;
-    console.log(listaExtrato[produto]);
   }
 
-  //soma todos os valores e da o valor total
-  document.getElementById("totalValor").innerHTML = formatter.format(total);
+  if (listaExtrato.length > 0) {
+    document.querySelector("table.lista tfoot").innerHTML = `
+   <tr style="d-flex">
+    <td class="font-total">Total</td>
 
-  document.getElementById("lucroTotal").innerHTML =
-    Math.sign(total) > 0 ? "[LUCRO]" : "[PREJUÍZO]";
+   <tr class="valor-bg">
+   <td class="font-total-valor totalValor" id="totalValor">${formatter.format(
+     total
+   )}</td>
+    <td class="lucro font-lucro" onkeypress="somaTotal()" id="lucroTotal">${
+      Math.sign(total) > 0 ? "[LUCRO]" : "[PREJUÍZO]"
+    }</td>
+    </tr>
+  </tr> 
+
+    `;
+    //soma todos os valores e da o valor total
+    document.getElementById("totalValor").innerHTML = formatter.format(total);
+
+    //mostra o lucro se for negativo será prejuízo se for positivo será lucro
+    document.getElementById("lucroTotal").innerHTML =
+      Math.sign(total) > 0 ? "[LUCRO]" : "[PREJUÍZO]";
+  }
 }
-
 //função para limpar os dados quando clica no botão limpar dados
 function limparDados() {
   let userConfirma = confirm("Deseja remover todas as transações?");
@@ -124,8 +145,13 @@ function limparDados() {
     document.querySelectorAll(".conteudo").forEach((element) => {
       element.remove();
     });
+    document.querySelectorAll("tfoot").forEach((element) => {
+      element.remove();
+    });
     localStorage.clear();
     listaExtrato = [];
   }
+  desenhaTabela();
 }
+
 desenhaTabela();

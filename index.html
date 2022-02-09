@@ -135,35 +135,32 @@
         <!-- CONTEÚDO DA PÁGINA - EXTRATO DE TRANSAÇÕES. -->
         <div class="extrato-bg">
           <section class="extrato-dados" aria-label="Extrato">
+            <h1 style="text-align: center" class="font-g">
+              Extrato de transações
+            </h1>
             <table style="width: 100%" class="lista" id="lista">
-              <tbody>
-                <tr>
-                  <td style="text-align: center" class="font-g">
-                    Extrato de transações
-                  </td>
-                </tr>
-
-                <!-- PARTE ONDE FICA OS TIPOS DO EXTRATO QUE NESSE CONTEXTO SÃO MERCADORIA E VALOR. -->
+              <!-- PARTE ONDE FICA OS TIPOS DO EXTRATO QUE NESSE CONTEXTO SÃO MERCADORIA E VALOR. -->
+              <!-- <tr class="extratos font-total-valor container"> -->
+              <thead>
                 <tr class="extratos font-total-valor container">
-                  <td id="name">Mercadoria</td>
-                  <td id="valor">Valor</td>
+                  <th id="name">Mercadoria</th>
+                  <th id="valor">Valor</th>
                 </tr>
+              </thead>
 
-                <!-- PARTE CRIADA PARA MOSTRAR O RESULTADO TOTAL DO EXTRATO. -->
-              </tbody>
-              <tr class="total" id="todasTransacoes">
-                <td class="font-total">Total</td>
-                <td
-                  class="font-total-valor totalValor"
-                  id="totalValor"
-                  onclick="fecharSideNav()"
-                ></td>
-              </tr>
+              <!-- PARTE CRIADA PARA MOSTRAR O RESULTADO TOTAL DO EXTRATO. -->
+
+              <tr class="d-flex nenhumaTransacao" id="todasTransacoes"></tr>
+
+              <tfoot class="lucroTotal"></tfoot>
+              <!--   <td class="font-total">Total</td>
+                <td class="font-total-valor totalValor" id="totalValor"></td>
+              </tr> -->
 
               <!-- PARTE CRIADA PARA QUE POSSA MOSTRAR SOMENTE O LUCRO QUE OBTEVE. -->
-              <tr class="lucro font-lucro">
+              <!--  <tr class="lucro font-lucro">
                 <td onkeypress="somaTotal()" id="lucroTotal"></td>
-              </tr>
+              </tr> -->
             </table>
           </section>
         </div>

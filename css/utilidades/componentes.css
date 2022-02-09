@@ -8,6 +8,11 @@
   margin-right: auto;
 }
 
+/* PARÂMETRO PARA QUE DETERMINADA LINHA DE CÓDIGO SEJA DISPLAY FLEX */
+.d-flex {
+  display: flex;
+}
+
 /* PARÂMETROS DE BOTÃO PARA QUE POSSA COLOCAR SOMENTE BOTAO EM UMA CLASSE QUE JÁ IRÁ ESTAR CONFIGURADO. */
 .botao {
   display: flex;

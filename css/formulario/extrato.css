@@ -55,5 +55,26 @@ E "EXTRATO DE TRANSAÇÕES" UM DO LADO DO OUTRO.*/
 .lucro {
   display: flex;
   justify-content: flex-end;
-  padding: 0px 20px 8px 40px;
+}
+
+.lucroTotal {
+  display: flex;
+  padding: 11px 20px;
+  /*   border-top: 1px solid var(--cor-4); */
+}
+
+.totalValor {
+  width: 100%;
+  display: flex;
+  justify-content: right;
+  padding-right: 20px;
+}
+
+.valor-bg {
+  width: 100%;
+}
+
+.nenhumaTransacao {
+  display: flex;
+  justify-content: center;
 }
