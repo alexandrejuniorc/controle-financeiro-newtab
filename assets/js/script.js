@@ -76,16 +76,27 @@ formatter.format(2500);
 function desenhaTabela() {
   var total = 0;
 
-  document.querySelectorAll("#todasTransacoes > *").forEach((element) => {
+  document.querySelectorAll(".conteudo").forEach((element) => {
     element.remove();
   });
 
   if (listaExtrato.length === 0) {
-    document.getElementById("todasTransacoes").innerHTML += `
+    document.getElementById("todasTransacoes").style.display = "flex";
+    console.log(listaExtrato.length === 0);
+    `
     <tr>
       <td class="nenhumaTransacao font-p" >Nenhuma transação cadastrada.</td>
     </tr>
     `;
+    /*   document.querySelectorAll("#idTotal").forEach((element) => {
+      element.remove();
+    }); */
+    document.querySelector(".lucroTotal").style.display = "none";
+  } else {
+    document.getElementById("todasTransacoes").style.display = "none";
+    console.log(listaExtrato);
+
+    document.querySelector(".lucroTotal").style.display = "flex";
   }
 
   for (produto in listaExtrato) {
@@ -133,8 +144,11 @@ function desenhaTabela() {
     document.getElementById("totalValor").innerHTML = formatter.format(total);
 
     //mostra o lucro se for negativo será prejuízo se for positivo será lucro
-    document.getElementById("lucroTotal").innerHTML =
-      Math.sign(total) > 0 ? "[LUCRO]" : "[PREJUÍZO]";
+    document.getElementById("lucroTotal").innerHTML = `
+      <tr id="idTotal">
+        ${Math.sign(total) > 0 ? "[LUCRO]" : "[PREJUÍZO]"}
+      </tr>
+      `;
   }
 }
 //função para limpar os dados quando clica no botão limpar dados
@@ -145,13 +159,15 @@ function limparDados() {
     document.querySelectorAll(".conteudo").forEach((element) => {
       element.remove();
     });
-    document.querySelectorAll("tfoot").forEach((element) => {
-      element.remove();
-    });
+
     localStorage.clear();
     listaExtrato = [];
+    desenhaTabela();
   }
-  desenhaTabela();
 }
 
 desenhaTabela();
+
+function fecharSideNav() {
+  document.querySelector(".fecharM").style.display = "none";
+}

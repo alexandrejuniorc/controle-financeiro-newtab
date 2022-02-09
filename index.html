@@ -41,16 +41,14 @@
 
           <!-- MENU DO CABEÇALHO -->
 
-          <nav aria-label="primaria">
+          <nav aria-label="primaria" class="fecharM">
             <ul class="header-menu font-menu cor-1">
               <div class="fecha-menu">
-                <h2 class="fechar">X</h2>
+                <a class="fechar" onclick="fecharSideNav()">X</a>
               </div>
 
               <li class="item-menu">
-                <a class="font-menu" href="#" onclick="fecharSideNav()">
-                  Cadastro de transações
-                </a>
+                <a class="font-menu" href="#"> Cadastro de transações </a>
               </li>
 
               <div class="divisor-menu">
@@ -149,10 +147,18 @@
               </thead>
 
               <!-- PARTE CRIADA PARA MOSTRAR O RESULTADO TOTAL DO EXTRATO. -->
-
+              <!-- 
               <tr class="d-flex nenhumaTransacao" id="todasTransacoes"></tr>
+ -->
+              <tr>
+                <td class="nenhumaTransacao font-p" id="todasTransacoes">
+                  Nenhuma transação cadastrada.
+                </td>
+              </tr>
 
-              <tfoot class="lucroTotal"></tfoot>
+              <tfoot class="lucroTotal">
+                <tr id="idTotal"></tr>
+              </tfoot>
               <!--   <td class="font-total">Total</td>
                 <td class="font-total-valor totalValor" id="totalValor"></td>
               </tr> -->
