@@ -12,8 +12,4 @@
 @import "./formulario/extrato.css";
 
 /* RESPONSIVO */
-@import "./responsivo/tablet-portrait.css";
-@import "./responsivo/tablet-landscape.css";
-@import "./responsivo/navigation-active.css";
-@import "./responsivo/smartphone-active.css";
-@import "./responsivo/smartphone.css";
+@import "./responsivo/responsivo.css";

@@ -1,0 +1,62 @@
+@media screen and (max-width: 768px) {
+  .transacao {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .formulario-bg {
+    width: auto;
+    margin-right: 0;
+  }
+
+  .formulario-dados {
+    flex-direction: row;
+  }
+
+  .tBotao {
+    display: flex;
+    justify-content: right;
+  }
+
+  .botao {
+    width: max-content;
+  }
+
+  .mercadoria label:first-child {
+    width: max-content;
+  }
+
+  .short {
+    width: 25%;
+  }
+  .long {
+    width: 50%;
+    margin: 0 20px;
+  }
+}
+
+@media screen and (max-width: 490px) {
+  .formulario-bg {
+    border: none;
+  }
+
+  .divisao {
+    border-bottom: 1px solid black;
+    margin: 28px 0 20px 0;
+  }
+
+  .formulario-dados {
+    flex-direction: column;
+  }
+  .mercadoria {
+    width: 100%;
+    margin: 0;
+  }
+  .botao {
+    width: 100%;
+  }
+
+  .extrato-bg {
+    padding-top: 20px;
+  }
+}

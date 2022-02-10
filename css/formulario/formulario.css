@@ -1,11 +1,13 @@
 /* DÁ A FORMA E O TAMANHO DO FORMULÁRIO. */
 .formulario-bg {
+  width: 50%;
   border: 1px solid var(--cor-4);
   display: flex;
   flex-direction: column;
   justify-content: center;
   padding: 20px 20px;
   border-radius: 4px;
+  margin-right: 20px;
 }
 
 /* DEIXA O CABEÇALHO DO FORMULÁRIO MALEÁVEL E QUE SE CENTRALIZE NO CENTRO. */
@@ -36,11 +38,8 @@
 }
 
 /* POSICIONA O BOTÃO AONDE QUERO. */
-.tBotao {
-  display: flex;
-  justify-content: right;
-  padding: 0 20px;
-  margin: 0;
+.botao {
+  width: 100%;
 }
 
 /* ESTILIZA O SELECT (OPÇÃO DE COMPRA). */
