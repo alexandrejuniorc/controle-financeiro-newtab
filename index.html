@@ -18,52 +18,31 @@
     <!-- CABEÇALHO -->
 
     <header class="header-bg">
-      <div class="header container">
-        <a href="./">
-          <img src="./assets/logo.svg" width="40px"height="22px alt="Controle
-          Financeiro" />
-        </a>
-        <div class="titulo-header container">
-          <h2 class="font-m cor-1">Controle Financeiro</h2>
-        </div>
-        <div class="boxMenu">
-          <div>
-            <div class="hamburguer">
-              <a href="./">
-                <img
-                  src="./assets/img/hamburguer.svg"
-                  alt="Menu"
-                  style="border-radius: 0%"
-                />
-              </a>
-            </div>
-          </div>
-
-          <!-- MENU DO CABEÇALHO -->
-
-          <nav aria-label="primaria" class="fecharM">
-            <ul class="header-menu font-menu cor-1">
-              <div class="fecha-menu">
-                <a class="fechar" onclick="fecharSideNav()">X</a>
-              </div>
-
-              <li class="item-menu">
-                <a class="font-menu" href="#"> Cadastro de transações </a>
-              </li>
-
-              <div class="divisor-menu">
-                <h2 class="divisor-conteudo">|</h2>
-              </div>
-
-              <li class="item-menu">
-                <a onclick="limparDados()" class="font-menu" href="#">
-                  Limpar dados
-                </a>
-              </li>
-            </ul>
-          </nav>
-        </div>
-      </div>
+      <nav class="header container">
+        <ul class="header-ul">
+          <li class="logo">
+            <img src="./assets/logo.svg" alt="" />
+          </li>
+          <li class="nomePagina"><p>Controle Financeiro</p></li>
+          <li id="mobile-menu">
+            <img
+              src="./assets/img/hamburguer.svg"
+              alt=""
+              onclick="abrirMenu()"
+            />
+          </li>
+          <li class="menu">
+            <a class="opcao" id="fecharMenu" onclick="fecharMenu()">
+              <img src="./assets/img/fecharMenu.svg" alt="" />
+            </a>
+            <a href="#" class="opcao" onclick="focoFormulario()"
+              >Cadastro de transações
+            </a>
+            <h2 class="divisor">|</h2>
+            <a class="opcao" onclick="limparDados()">Limpar dados</a>
+          </li>
+        </ul>
+      </nav>
     </header>
 
     <!-- CONTEÚDO DO PÁGINA - NOVA TRANSAÇÃO. -->

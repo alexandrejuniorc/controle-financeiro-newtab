@@ -57,48 +57,46 @@ img [src$=".jpg"] {
 
 /* FAZ A QUEBRA DOS ITENS PARA QUE FIQUEM NA MESMA LINHA E PADRONIZA COM OS PARÂMETROS DE ACORDO COM O DESIGN */
 .header {
-  display: flex;
   width: 100%;
-  justify-content: center;
-  align-items: center;
-  padding: 4px 20px 4px 20px;
 }
 
-/* FAZ COM QUE OS LINKS DO CABEÇALHO FIQUEM MALEÁVEIS AO CAMINHAR DO PROJETO */
-.header a {
+.header-ul {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nomePagina {
+  width: 411px;
+  margin-right: 249px;
+}
+
+#mobile-menu,
+#fecharMenu {
+  display: none;
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+  align-items: left;
+}
+
+.nomePagina {
   display: flex;
   align-items: center;
 }
 
-/* ESTILIZA O MENU COM A COR E  */
-.header-menu {
+.menu {
   background: var(--cor-2);
   display: flex;
-  /*  flex-wrap: wrap; */
-}
-
-/* ESTILIZA O MENU DE ACORDO COM O DESIGN */
-.item-menu {
-  padding: 8px 10px;
+  justify-content: center;
   align-items: center;
-  display: flex;
-  text-align: center;
+  padding: 0 20px;
 }
 
-.item-menu:hover {
-  background: var(--cor-1);
-  color: white;
-}
-
-/* COLOCA O DIVISOR NO MEIO DO BACKGROUND DO MENU */
-.divisor-menu {
-  display: flex;
-  align-items: center;
-}
-
-/* ESTILIZA O DIVISOR COM UMA BORDA, DE ACORDO COM O DESIGN PROPOSTO */
-.divisor-conteudo {
+.divisor {
   color: var(--cor-4);
+  margin: 0 17px;
 }
 
 /* CONTEÚDO DO FOOTER */

@@ -22,9 +22,13 @@ formatter.format(2500);
 
 /* FUNÇÕES */
 
+function abrirMenu() {
+  document.getElementsByClassName("menu")[0].classList.add("abrirMenu");
+}
+
 //função pra fechar o menu hamburguer
-function fecharSideNav() {
-  document.querySelector(".fecharM").style.display = "none";
+function fecharMenu() {
+  document.getElementsByClassName("menu")[0].classList.remove("abrirMenu");
 }
 
 //função para limpar os dados quando clica no botão limpar dados
