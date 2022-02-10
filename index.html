@@ -109,12 +109,13 @@
               <input
                 type="text"
                 name="valor"
-                onkeypress="campoValor(event)"
                 onfocus="this.value = ''"
                 id="valor"
                 placeholder="R$ 0,00"
+                onkeypress="mascaraDinheiro(event)"
               />
             </div>
+            <!--   onkeypress="campoValor(event)" -->
           </div>
 
           <!-- BOTÃO DA SEÇÃO "NOVA TRANSAÇÃO" -->
@@ -177,6 +178,7 @@
     <footer class="footer-bg">
       <div class="footer"></div>
     </footer>
+    <script src="./assets//js/form.js"></script>
     <script src="./assets/js/script.js"></script>
   </body>
 </html>

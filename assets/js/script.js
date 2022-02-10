@@ -1,6 +1,7 @@
+/* GLOBAIS */
+//localStorage
 var listaExtrato = [];
 
-//localStorage
 if (localStorage.getItem("lista") !== null) {
   var listaStorage = localStorage.getItem("lista");
   console.log("listaStorage", listaStorage);
@@ -11,67 +12,35 @@ if (localStorage.getItem("lista") !== null) {
   listaExtrato = JSON.parse(listaStorage);
 }
 
-//validação do formulário
-//foi validado todos os campos com sucesso!!
-function validacao(e) {
-  e.preventDefault();
-
-  var nomeMercadoria = document.getElementById("nome").value;
-  var valorMercadoria = document.getElementById("valor").value;
-  var tipoTransacao = document.getElementById("selecione").value;
-
-  if (nomeMercadoria == "") {
-    alert("Preencha o nome da mercadoria!");
-    return false;
-  }
-  if (valorMercadoria == "") {
-    alert("Preencha o valor da mercadoria!");
-    return false;
-  }
-
-  if (tipoTransacao == "selecione") {
-    alert("Preencha o tipo de transação!");
-    return false;
-  }
-
-  //coloca a variável nomeMercadoria dentro de um objeto da array listaExtrato
-  listaExtrato.push({
-    tipoTransacao: e.target.elements["selecione"].value,
-    nomeMercadoria: e.target.elements["name"].value,
-    valorMercadoria: e.target.elements["valor"].value.replace(/^.\D/g, ""), //remove todos os dígitos que não sejam números e mantém apenas o ponto, como foi declarado
-  });
-
-  //transforma os objetos em string
-  var listaString = JSON.stringify(listaExtrato);
-
-  //localStorage
-  localStorage.setItem("lista", listaString);
-
-  desenhaTabela();
-}
-
-//adiciona máscara no campo valor
-function campoValor(e) {
-  e.preventDefault();
-  console.log(e);
-
-  if (e.target.value.length == 2) {
-    e.target.value += ".";
-  }
-
-  if (/[0-9]/g.test(e.key) && e.target.value.length < 5) {
-    e.target.value += e.key;
-  }
-}
-
+//transforma todo numero no formato da moeda real
 var formatter = new Intl.NumberFormat("pt-BR", {
   style: "currency",
   currency: "BRL",
-  // These options are needed to round to whole numbers if that's what you want.
-  //minimumFractionDigits: 0, // (this suffices for whole numbers, but will print 2500.10 as $2,500.1)
-  maximumFractionDigits: 2, // (causes 2500.99 to be printed as $2,501)
+  maximumFractionDigits: 2,
 });
 formatter.format(2500);
+
+/* FUNÇÕES */
+
+//função pra fechar o menu hamburguer
+function fecharSideNav() {
+  document.querySelector(".fecharM").style.display = "none";
+}
+
+//função para limpar os dados quando clica no botão limpar dados
+function limparDados() {
+  let userConfirma = confirm("Deseja remover todas as transações?");
+
+  if (userConfirma) {
+    document.querySelectorAll(".conteudo").forEach((element) => {
+      element.remove();
+    });
+
+    localStorage.clear();
+    listaExtrato = [];
+    desenhaTabela();
+  }
+}
 
 function desenhaTabela() {
   var total = 0;
@@ -151,23 +120,53 @@ function desenhaTabela() {
       `;
   }
 }
-//função para limpar os dados quando clica no botão limpar dados
-function limparDados() {
-  let userConfirma = confirm("Deseja remover todas as transações?");
 
-  if (userConfirma) {
-    document.querySelectorAll(".conteudo").forEach((element) => {
-      element.remove();
-    });
+//validação do formulário
+//foi validado todos os campos com sucesso!!
+function validacao(e) {
+  e.preventDefault();
 
-    localStorage.clear();
-    listaExtrato = [];
-    desenhaTabela();
+  var nomeMercadoria = document.getElementById("nome").value;
+  var valorMercadoria = document.getElementById("valor").value;
+  var tipoTransacao = document.getElementById("selecione").value;
+
+  if (nomeMercadoria == "") {
+    alert("Preencha o nome da mercadoria!");
+    return false;
   }
+  if (valorMercadoria == "") {
+    alert("Preencha o valor da mercadoria!");
+    return false;
+  }
+
+  if (tipoTransacao == "selecione") {
+    alert("Preencha o tipo de transação!");
+    return false;
+  }
+  /* 
+  valorAtual = e.target.value.toString();
+  valorAtual = valorAtual.replace(/[\D]+/g, "");
+  valorAtual = valorAtual.replace(/([0-9]{1})$/g, ",$1"); */
+
+  //coloca a variável nomeMercadoria dentro de um objeto da array listaExtrato
+  listaExtrato.push({
+    tipoTransacao: e.target.elements["selecione"].value,
+    nomeMercadoria: e.target.elements["name"].value,
+    valorMercadoria: e.target.elements["valor"].value.replace(
+      /([0-9]{4})[,|\.]/g,
+      ".$1"
+    ),
+  });
+
+  /*   /^.\D/g, "" */
+
+  //transforma os objetos em string
+  var listaString = JSON.stringify(listaExtrato);
+
+  //localStorage
+  localStorage.setItem("lista", listaString);
+
+  desenhaTabela();
 }
 
 desenhaTabela();
-
-function fecharSideNav() {
-  document.querySelector(".fecharM").style.display = "none";
-}
