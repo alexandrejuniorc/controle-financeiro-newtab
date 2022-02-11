@@ -18,31 +18,47 @@
     <!-- CABEÇALHO -->
 
     <header class="header-bg">
-      <nav class="header container">
-        <ul class="header-ul">
-          <li class="logo">
+      <div class="header container">
+        <div class="logoConteudo">
+          <a class="logo">
             <img src="./assets/logo.svg" alt="" />
-          </li>
-          <li class="nomePagina"><p>Controle Financeiro</p></li>
-          <li id="mobile-menu">
-            <img
-              src="./assets/img/hamburguer.svg"
-              alt=""
-              onclick="abrirMenu()"
-            />
-          </li>
-          <li class="menu">
-            <a class="opcao" id="fecharMenu" onclick="fecharMenu()">
-              <img src="./assets/img/fecharMenu.svg" alt="" />
-            </a>
-            <a href="#" class="opcao" onclick="focoFormulario()"
-              >Cadastro de transações
-            </a>
-            <h2 class="divisor">|</h2>
-            <a class="opcao" onclick="limparDados()">Limpar dados</a>
-          </li>
-        </ul>
-      </nav>
+          </a>
+          <a class="nomePagina"><p>Controle Financeiro</p></a>
+        </div>
+        <nav class="">
+          <ul class="header-ul">
+            <li id="mobile-menu">
+              <img
+                src="./assets/img/hamburguer.svg"
+                alt=""
+                onclick="abrirMenu()"
+              />
+            </li>
+            <li class="menu">
+              <div class="itens-menu">
+                <div class="seguraFechaMenu">
+                  <a class="opcao" id="fecharMenu" onclick="fecharMenu()">
+                    <img src="./assets/img/fecharMenu.svg" alt="" />
+                  </a>
+                </div>
+                <div class="seguraConteudo">
+                  <a
+                    href="#"
+                    class="opcao font-menu"
+                    onclick="focoFormulario()"
+                  >
+                    Cadastro de transações
+                  </a>
+                  <h2 class="divisor">|</h2>
+                  <a class="opcao font-menu" onclick="limparDados()">
+                    Limpar dados
+                  </a>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </header>
 
     <!-- CONTEÚDO DO PÁGINA - NOVA TRANSAÇÃO. -->

@@ -49,15 +49,15 @@ img [src$=".jpg"] {
 
 /* ESTILIZA O CABEÇALHO COM A COR E A MARGEM DE ACORDO COM O DESIGN */
 .header-bg {
-  display: flex;
-  justify-content: center;
   background-color: var(--cor-3);
   padding: 20px 0 20px 0;
 }
 
 /* FAZ A QUEBRA DOS ITENS PARA QUE FIQUEM NA MESMA LINHA E PADRONIZA COM OS PARÂMETROS DE ACORDO COM O DESIGN */
 .header {
-  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .header-ul {
@@ -65,9 +65,16 @@ img [src$=".jpg"] {
   justify-content: space-between;
 }
 
-.nomePagina {
-  width: 411px;
-  margin-right: 249px;
+.logoConteudo {
+  display: flex;
+}
+
+.logoConteudo img {
+  margin-right: 20px;
+}
+
+.abrirMenu {
+  width: 250px;
 }
 
 #mobile-menu,
@@ -87,11 +94,17 @@ img [src$=".jpg"] {
 }
 
 .menu {
+  width: 100%;
   background: var(--cor-2);
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 0 20px;
+}
+
+.itens-menu {
+  display: flex;
+  align-items: center;
 }
 
 .divisor {

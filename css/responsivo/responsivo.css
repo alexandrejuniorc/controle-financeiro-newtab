@@ -33,6 +33,91 @@
     width: 50%;
     margin: 0 20px;
   }
+
+  .extrato-bg {
+    margin-top: 23px;
+    padding-top: 21px;
+  }
+
+  /* MENU MOBILE */
+
+  #mobile-menu {
+    display: flex;
+  }
+
+  #mobile-menu img {
+    border-radius: 0px;
+  }
+
+  .menu {
+    display: none;
+    padding: 0;
+    width: 252px;
+    transition: 0.5s;
+  }
+
+  #fecharMenu {
+    display: flex;
+    /*  margin-right: 216px; */
+    justify-content: left;
+    transition: 0.5s;
+  }
+
+  .abrirMenu {
+    position: fixed;
+    height: 100vh;
+    background: var(--cor-1);
+    top: 0;
+    right: 0;
+    transition: 0.5s;
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+    justify-content: flex-start;
+  }
+
+  .itens-menu {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .divisor {
+    display: none;
+  }
+
+  /* configura o container que segura o fechar do menu*/
+  .seguraFechaMenu {
+    margin-bottom: 26px;
+    display: flex;
+    width: 100%;
+  }
+
+  /* configura a container que segura o conteudo do menu */
+  .seguraConteudo {
+    width: 100%;
+  }
+
+  /* configura o estilo do conteúdo do menu */
+  .abrirMenu a {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    padding: 10px 20px;
+    color: var(--cor-2);
+    cursor: pointer;
+  }
+
+  /* tira o hover do fechar */
+  #fecharMenu:hover {
+    background: none;
+  }
+
+  /* adiciona hover a todo conteúdo do menu */
+  .abrirMenu a:hover {
+    background: #c4c4c4;
+    color: var(--cor-1);
+  }
 }
 
 @media screen and (max-width: 490px) {
