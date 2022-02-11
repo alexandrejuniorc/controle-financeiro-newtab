@@ -96,6 +96,7 @@
   /* configura a container que segura o conteudo do menu */
   .seguraConteudo {
     width: 100%;
+    flex-direction: column;
   }
 
   /* configura o estilo do conteúdo do menu */
@@ -106,6 +107,7 @@
     padding: 10px 20px;
     color: var(--cor-2);
     cursor: pointer;
+    width: -webkit-fill-available;
   }
 
   /* tira o hover do fechar */
@@ -121,6 +123,17 @@
 }
 
 @media screen and (max-width: 490px) {
+  .nomePagina {
+    width: 70vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .menu {
+    width: 351px;
+  }
+
   .formulario-bg {
     border: none;
   }

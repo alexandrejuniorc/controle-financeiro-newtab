@@ -82,12 +82,6 @@ img [src$=".jpg"] {
   display: none;
 }
 
-.menu {
-  display: flex;
-  justify-content: center;
-  align-items: left;
-}
-
 .nomePagina {
   display: flex;
   align-items: center;
@@ -102,9 +96,15 @@ img [src$=".jpg"] {
   padding: 0 20px;
 }
 
-.itens-menu {
+.menu .opcao {
+  cursor: pointer;
+}
+
+.seguraConteudo {
   display: flex;
+  justify-content: center;
   align-items: center;
+  flex-direction: row;
 }
 
 .divisor {
