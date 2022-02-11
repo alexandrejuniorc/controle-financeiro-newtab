@@ -12,10 +12,7 @@ p,
 blockquote,
 dd {
   margin: 0px;
-}
-
-body {
-  -webkit-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased;
 }
 
 /* RESETA O PADDING DA LISTA E TIRA O ESTILO DELA. */
@@ -70,7 +67,17 @@ img [src$=".jpg"] {
 }
 
 .logoConteudo img {
+  width: 40px;
+  height: 36px;
   margin-right: 20px;
+  position: relative;
+}
+
+.nomePagina {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-left: 20px;
 }
 
 .abrirMenu {
@@ -80,11 +87,6 @@ img [src$=".jpg"] {
 #mobile-menu,
 #fecharMenu {
   display: none;
-}
-
-.nomePagina {
-  display: flex;
-  align-items: center;
 }
 
 .menu {

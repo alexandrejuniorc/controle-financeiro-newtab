@@ -1,3 +1,4 @@
+/* responsivo tablet */
 @media screen and (max-width: 768px) {
   .transacao {
     flex-direction: column;
@@ -19,7 +20,7 @@
   }
 
   .botao {
-    width: max-content;
+    width: 200px;
   }
 
   .mercadoria label:first-child {
@@ -53,7 +54,6 @@
     display: none;
     padding: 0;
     width: 252px;
-    transition: 0.5s;
   }
 
   #fecharMenu {
@@ -69,6 +69,7 @@
     background: var(--cor-1);
     top: 0;
     right: 0;
+    overflow-x: hidden;
     transition: 0.5s;
     display: flex;
     flex-direction: column;
@@ -122,9 +123,15 @@
   }
 }
 
+/* responsivo mobile */
 @media screen and (max-width: 490px) {
+  .logoConteudo {
+    display: flex;
+    width: 100%;
+  }
   .nomePagina {
-    width: 70vw;
+    margin: 0;
+    /* width: 100%; */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -139,7 +146,7 @@
   }
 
   .divisao {
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid var(--cor-4);
     margin: 28px 0 20px 0;
   }
 
