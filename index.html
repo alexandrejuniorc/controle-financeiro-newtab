@@ -115,7 +115,17 @@
                 id="valor"
                 placeholder="R$ 0,00"
                 onkeypress="mascaraDinheiro(event)"
+                oncopy="return false"
+                oncut="return false"
+                onpaste="return false"
               />
+              <!-- 
+                faz a função de não deixar copiar e nem colar nada.
+
+                oncopy="return false" 
+                oncut="return false"
+                onpaste="return false"
+               -->
             </div>
             <!--   onkeypress="campoValor(event)" -->
           </div>
