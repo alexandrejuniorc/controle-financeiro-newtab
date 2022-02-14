@@ -22,11 +22,19 @@ formatter.format(2500);
 
 /* FUNÇÕES */
 
+//formata o valor para Real "R$"
+function formatterCurrency(value) {
+  const valueFormat = value.toLocaleString("pt-BR", {
+    style: "currency",
+    currency: "BRL",
+  });
+  return valueFormat;
+}
+
+//funções que fazer o menu-hamburguer funcionar
 function abrirMenu() {
   document.getElementsByClassName("menu")[0].classList.add("abrirMenu");
 }
-
-//função pra fechar o menu hamburguer
 function fecharMenu() {
   document.getElementsByClassName("menu")[0].classList.remove("abrirMenu");
 }
@@ -46,6 +54,7 @@ function limparDados() {
   }
 }
 
+//função que desenha toda a tabela de acordo com as funções criadas
 function desenhaTabela() {
   var total = 0;
 
@@ -71,15 +80,19 @@ function desenhaTabela() {
 
     document.querySelector(".lucroTotal").style.display = "flex";
   }
+  let valorMascara;
 
   for (produto in listaExtrato) {
     if (listaExtrato[produto].tipoTransacao == "compra") {
-      total -= parseFloat(listaExtrato[produto].valorMercadoria);
+      // total -= parseFloat(listaExtrato[produto].valorMercadoria);
+      valorMascara = listaExtrato[produto];
+      total -= Number(listaExtrato[produto].valorMercadoria);
     } else {
-      total += parseFloat(listaExtrato[produto].valorMercadoria);
+      // total += parseFloat(listaExtrato[produto].valorMercadoria);
+      total += Number(listaExtrato[produto].valorMercadoria);
     }
 
-    //innerHTML é o conteúdo que está dentro da tag
+    //adiciona as transações
     document.querySelector("table.lista tbody").innerHTML += `
       <tr class="tabelaLinha d-flex">
     <tr class="mercadorias conteudo d-flex ${
@@ -89,7 +102,10 @@ function desenhaTabela() {
           ${listaExtrato[produto].nomeMercadoria}
         </td>
           <td class="valor-calculado">
-          ${formatter.format(parseFloat(listaExtrato[produto].valorMercadoria))}
+          ${
+            //formatter.format(parseFloat(listaExtrato[produto].valorMercadoria))
+            formatterCurrency(Number(listaExtrato[produto].valorMercadoria))
+          }
           </td>
       </tr>
       </tr>
@@ -97,6 +113,7 @@ function desenhaTabela() {
 `;
   }
 
+  //total
   if (listaExtrato.length > 0) {
     document.querySelector("table.lista tfoot").innerHTML = `
    <tr style="d-flex">
@@ -147,24 +164,16 @@ function validacao(e) {
     alert("Preencha o tipo de transação!");
     return false;
   }
-  /* 
-  valorAtual = e.target.value.toString();
-  valorAtual = valorAtual.replace(/[\D]+/g, "");
-  valorAtual = valorAtual.replace(/([0-9]{1})$/g, ",$1"); */
 
-  //coloca a variável nomeMercadoria dentro de um objeto da array listaExtrato
   listaExtrato.push({
     tipoTransacao: e.target.elements["selecione"].value,
     nomeMercadoria: e.target.elements["name"].value,
-    valorMercadoria: e.target.elements["valor"].value.replace(
-      /([0-9]{4})[,|\.]/g,
-      ".$1"
-    ),
+    valorMercadoria: e.target.elements["valor"].value
+      .replaceAll(".", "")
+      .replaceAll(",", "."),
   });
 
-  /*   /^.\D/g, "" */
-
-  //transforma os objetos em string
+  //transforma os objetos em string para que possam ser mostrados na tabela
   var listaString = JSON.stringify(listaExtrato);
 
   //localStorage
