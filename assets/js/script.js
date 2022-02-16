@@ -70,9 +70,6 @@ function desenhaTabela() {
       <td class="nenhumaTransacao font-p" >Nenhuma transação cadastrada.</td>
     </tr>
     `;
-    /*   document.querySelectorAll("#idTotal").forEach((element) => {
-      element.remove();
-    }); */
     document.querySelector(".lucroTotal").style.display = "none";
   } else {
     document.getElementById("todasTransacoes").style.display = "none";
@@ -94,21 +91,21 @@ function desenhaTabela() {
 
     //adiciona as transações
     document.querySelector("table.lista tbody").innerHTML += `
-      <tr class="tabelaLinha d-flex">
-    <tr class="mercadorias conteudo d-flex ${
-      listaExtrato[produto].tipoTransacao
-    } font-mercadorias" id="todasTransacoes"> 
-        <td>
+  
+    <tr class="grid-bg extratos mercadorias conteudo font-mercadorias" id="todasTransacoes"> 
+     <td class="campoTransacao">${
+       listaExtrato[produto].tipoTransacao == "compra" ? "-" : "+"
+     }</td>
+        <td class="campoMercadoria">
           ${listaExtrato[produto].nomeMercadoria}
         </td>
+        <td></td>
+        <td></td>
           <td class="valor-calculado">
-          ${
-            //formatter.format(parseFloat(listaExtrato[produto].valorMercadoria))
-            formatterCurrency(Number(listaExtrato[produto].valorMercadoria))
-          }
+          ${formatterCurrency(Number(listaExtrato[produto].valorMercadoria))}
           </td>
       </tr>
-      </tr>
+
  
 `;
   }
@@ -116,20 +113,24 @@ function desenhaTabela() {
   //total
   if (listaExtrato.length > 0) {
     document.querySelector("table.lista tfoot").innerHTML = `
-   <tr style="d-flex">
-    <td class="font-total">Total</td>
-
-   <tr class="valor-bg">
-   <td class="font-total-valor totalValor" id="totalValor">${formatter.format(
-     total
-   )}</td>
-    <td class="lucro font-lucro" onkeypress="somaTotal()" id="lucroTotal">${
-      Math.sign(total) > 0 ? "[LUCRO]" : "[PREJUÍZO]"
-    }</td>
+   
+    <tr>
+      <td>Total</td>
+      <td>${formatter.format(total)}</td>
     </tr>
-  </tr> 
 
     `;
+
+    /* <td class="font-total">Total</td>
+    <td class="font-total-valor totalValor" id="totalValor">
+     ${formatter.format(total)}
+      </td>
+    <tr class="valor-bg">
+      <td class="lucro font-lucro" onkeypress="somaTotal()" id="lucroTotal">
+       ${Math.sign(total) > 0 ? "[LUCRO]" : "[PREJUÍZO]"}
+        </td>
+           </tr>  */
+
     //soma todos os valores e da o valor total
     document.getElementById("totalValor").innerHTML = formatter.format(total);
 

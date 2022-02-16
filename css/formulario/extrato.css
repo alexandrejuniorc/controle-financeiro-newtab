@@ -1,9 +1,9 @@
 /* FAZ A QUEBRA DO CONTAINER ASSIM DEIXANDO "NOVA TRANSAÇÃO"
 E "EXTRATO DE TRANSAÇÕES" UM DO LADO DO OUTRO.*/
-.transacao {
-  display: flex;
-  padding-top: 30px; /* SEPARA O CONTAINER DO HEADER. */
-}
+/*.transacao {
+    display: flex;
+  padding-top: 30px; */ /* SEPARA O CONTAINER DO HEADER. 
+}*/
 /* ADICIONA PARÂMETROS DO CONTAINER DE EXTRATO.  */
 .extrato-bg {
   /*   border: 1px solid var(--cor-4); */
@@ -17,58 +17,72 @@ E "EXTRATO DE TRANSAÇÕES" UM DO LADO DO OUTRO.*/
 }
 
 /* PADRONIZA OS PARÂMETROS MERCADORIA E VALOR COM SUAS DEVIDAS CONFIGURAÇÕES. */
+
+.grid-bg {
+  display: grid;
+  grid-template-columns: 10% 30% 30% 10% 20%;
+}
 .extratos {
-  display: flex;
-  justify-content: space-between;
-  padding: 19px 20px 0px 20px;
-  border-bottom: 1px solid var(--cor-4);
+  /*  display: grid;
+  grid-template-columns: 10% 30% 30% 30%;
+  border-bottom: 1px solid var(--cor-4); */
+}
+
+#name {
+  text-align: left;
+}
+#valor {
+  text-align: left;
 }
 
 /* PADRONIZA OS PARÂMETROS DAS MERCADORIAS .*/
 .mercadorias {
-  display: flex;
-  justify-content: space-between;
-  padding: 7px 20px 8px 40px;
-  border-bottom: 1px solid var(--cor-4);
-  /*  background: url(../../assets/img/+.svg) no-repeat 23px 11px; */
+  /*  display: grid;
+  align-items: center;
+  padding: 7px 0 8px 0;
+  grid-template-columns: 10% 30% 30% 30%;
+  border-bottom: 1px solid var(--cor-4); */
 }
 
-/* ADICIONA O ÍCONE + QUANDO O TIPO DE TRANSAÇÃO É UMA VENDA. */
-.venda {
-  background: url(../../assets/img/+.svg) no-repeat 23px 11px;
+/* .campoTransacao {
+  width: 10%;
+} */
+
+.campoMercadoria {
+  word-wrap: break-word;
 }
-/* ADICIONA O ÍCONE - QUANDO O TIPO DE TRANSAÇÃO É COMPRA . */
-.compra {
-  background: url(../../assets/img/-.svg) no-repeat 23px 15px;
+
+.campoValor {
+  text-align: left;
 }
 
 /* PADRONIZA OS PARÂMETROS DO VALOR TOTAL.*/
-.total {
-  display: flex;
+/*.total {
+    display: flex;
   justify-content: space-between;
   padding: 7px 20px 0px 40px;
   margin-top: 3px;
+  border-top: 1px solid var(--cor-4); 
+}*/
+
+/* PADRONIZA OS PARÂMETROS DO LUCRO. */
+/*.lucro {
+   display: flex;
+  justify-content: flex-end; 
+}
+*/
+.lucroTotal {
+  display: grid;
+  grid-template-columns: 10% 30% 30% 30%;
   border-top: 1px solid var(--cor-4);
 }
 
-/* PADRONIZA OS PARÂMETROS DO LUCRO. */
-.lucro {
-  display: flex;
-  justify-content: flex-end;
-}
-
-.lucroTotal {
-  display: flex;
-  padding: 11px 20px;
-  /*   border-top: 1px solid var(--cor-4); */
-}
-
-.totalValor {
-  width: 100%;
+/*.totalValor {
+   width: 100%;
   display: flex;
   justify-content: right;
-  padding-right: 20px;
-}
+  padding-right: 20px; 
+}*/
 
 .valor-bg {
   width: 100%;
