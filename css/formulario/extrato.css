@@ -1,3 +1,10 @@
+/* FAZ A QUEBRA DO CONTAINER ASSIM DEIXANDO "NOVA TRANSAÇÃO"
+E "EXTRATO DE TRANSAÇÕES" UM DO LADO DO OUTRO.*/
+.transacao {
+  display: flex;
+  padding-top: 30px; /* SEPARA O CONTAINER DO HEADER. */
+}
+
 /* alinha ao centro o texto colocado caso não tenha nenhuma transação */
 .nenhumaTransacao {
   display: grid;
@@ -43,7 +50,7 @@
 #name {
   text-align: left;
 }
-#valor {
+.valor {
   text-align: right;
 }
 

@@ -1,14 +1,12 @@
 /* responsivo tablet */
-@media screen and (max-width: 880px) {
+@media (max-width: 768px) {
   .transacao {
     flex-direction: column;
     width: 100%;
   }
 
   .formulario-bg {
-    width: 100%;
-    height: 189px;
-    margin-right: 0;
+    width: auto;
   }
 
   .formulario-dados {

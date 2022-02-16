@@ -18,11 +18,11 @@
 }
 
 /* DEIXA A CLASSE TRANSAÇÃO MALEÁVEL, CENTRALIZA ELA NO MEIO E ADICIONA UM PADDING PARA QUE SE COMPORTE IGUAL AO DESIGN. */
-.transacao {
+/* .transacao {
   display: flex;
   justify-content: center;
   padding: 15px;
-}
+} */
 
 /* PARÂMETROS DE ESPAÇAMENTO E ALINHAMENTO DO FORMULÁRIO. */
 .formulario-dados {
