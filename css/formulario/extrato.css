@@ -30,7 +30,7 @@
    contém 5 colunas ao todo */
 .grid-bg {
   display: grid;
-  grid-template-columns: 10% 30% 30% 10% 20%;
+  grid-template-columns: 10% 30% 18% 40% 2%;
 }
 
 /* da o espaço dentro do variável e coloca uma borda abaixo dela */
@@ -44,7 +44,7 @@
   text-align: left;
 }
 #valor {
-  text-align: left;
+  text-align: right;
 }
 
 /* alinha o sinal de + ou - a direita
@@ -60,20 +60,24 @@
   word-wrap: break-word;
 }
 
+.valor-calculado {
+  text-align: right;
+}
+
 /* parte do valor total de todas as transações */
 .lucroTotal {
   display: grid;
-  grid-template-columns: 10% 30% 30% 10% 20%;
+  grid-template-columns: 10% 30% 18% 40% 2%;
   border-top: 1px solid var(--cor-4);
   padding-top: 11px;
 }
 
 /* alinha o valor total a esquerda */
 .totalValor {
-  text-align: left;
+  text-align: right;
 }
 
 /* alinha o lucro ou prejuízo a esquerda */
 .lucroPrejuizo {
-  text-align: left;
+  text-align: right;
 }

@@ -1,14 +1,14 @@
 /*  GLOBAL  */
-@import "./global/global.css";
+@import "../css/global/global.css";
 
 /*  UTILIDADES  */
-@import "./global/componentes.css";
+@import "../css/global/componentes.css";
 
 /* RESPONSIVO */
-@import "./global/responsivo.css";
+@import "../css/global/responsivo.css";
 
 /* FORMULÁRIO */
-@import "./formulario/formulario.css";
+@import "../css/formulario/formulario.css";
 
 /* EXTRATO */
-@import "./formulario/extrato.css";
+@import "../css/formulario/extrato.css";

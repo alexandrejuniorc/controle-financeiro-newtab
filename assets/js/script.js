@@ -100,10 +100,11 @@ function desenhaTabela() {
           ${listaExtrato[produto].nomeMercadoria}
         </td>
         <td></td>
-        <td></td>
+        
           <td class="valor-calculado">
           ${formatterCurrency(Number(listaExtrato[produto].valorMercadoria))}
           </td>
+          <td></td>
       </tr>
 
  
@@ -119,9 +120,8 @@ function desenhaTabela() {
     </tr>
     
     <tr></tr>
-    <tr></tr>
     <tr class="d-grid totalValor font-total-valor">
-    <td>
+    <td id="totalValor">
     ${formatter.format(total)}
     </td>
     <td class="lucroPrejuizo font-lucro" onkeypress="somaTotal()" id="lucroTotal">
@@ -130,16 +130,6 @@ function desenhaTabela() {
     
     </tr>
     `;
-
-    /* <td class="font-total">Total</td>
-    <td class="font-total-valor totalValor" id="totalValor">
-     ${formatter.format(total)}
-      </td>
-    <tr class="valor-bg">
-      <td class="lucro font-lucro" onkeypress="somaTotal()" id="lucroTotal">
-       ${Math.sign(total) > 0 ? "[LUCRO]" : "[PREJUÍZO]"}
-        </td>
-           </tr>  */
 
     //soma todos os valores e da o valor total
     document.getElementById("totalValor").innerHTML = formatter.format(total);
