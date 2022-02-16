@@ -9,6 +9,12 @@
   padding-top: 20px 0 0 0px;
   width: 100%;
 }
+
+/* faz com que não vaze nada do extrato e quebre sempre que o seu width chegar ao fim */
+.extrato-dados {
+  word-break: break-word;
+}
+
 /* CENTRALIZA O TEXTO "EXTRATO DE TRANSAÇÕES". */
 .extrato-dados h1 {
   align-items: center;

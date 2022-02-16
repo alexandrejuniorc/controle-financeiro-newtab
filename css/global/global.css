@@ -110,6 +110,7 @@ img [src$=".jpg"] {
 }
 
 .divisor {
+  padding: 7px 0 4px 0;
   color: var(--cor-4);
   margin: 0 17px;
 }
