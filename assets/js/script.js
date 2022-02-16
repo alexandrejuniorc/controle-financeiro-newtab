@@ -63,7 +63,7 @@ function desenhaTabela() {
   });
 
   if (listaExtrato.length === 0) {
-    document.getElementById("todasTransacoes").style.display = "flex";
+    document.getElementById("todasTransacoes").style.display = "grid";
     console.log(listaExtrato.length === 0);
     `
     <tr>
@@ -75,7 +75,7 @@ function desenhaTabela() {
     document.getElementById("todasTransacoes").style.display = "none";
     console.log(listaExtrato);
 
-    document.querySelector(".lucroTotal").style.display = "flex";
+    document.querySelector(".lucroTotal").style.display = "grid";
   }
   let valorMascara;
 
@@ -92,7 +92,7 @@ function desenhaTabela() {
     //adiciona as transações
     document.querySelector("table.lista tbody").innerHTML += `
   
-    <tr class="grid-bg extratos mercadorias conteudo font-mercadorias" id="todasTransacoes"> 
+    <tr class="grid-bg extratos conteudo font-mercadorias" id="todasTransacoes"> 
      <td class="campoTransacao">${
        listaExtrato[produto].tipoTransacao == "compra" ? "-" : "+"
      }</td>
@@ -113,12 +113,22 @@ function desenhaTabela() {
   //total
   if (listaExtrato.length > 0) {
     document.querySelector("table.lista tfoot").innerHTML = `
-   
+    <tr></tr>
     <tr>
-      <td>Total</td>
-      <td>${formatter.format(total)}</td>
+      <td class="font-total">Total</td>
     </tr>
-
+    
+    <tr></tr>
+    <tr></tr>
+    <tr class="d-grid totalValor font-total-valor">
+    <td>
+    ${formatter.format(total)}
+    </td>
+    <td class="lucroPrejuizo font-lucro" onkeypress="somaTotal()" id="lucroTotal">
+    ${Math.sign(total) > 0 ? "[LUCRO]" : "[PREJUÍZO]"}
+    </td>
+    
+    </tr>
     `;
 
     /* <td class="font-total">Total</td>

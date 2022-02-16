@@ -1,9 +1,8 @@
-/* FAZ A QUEBRA DO CONTAINER ASSIM DEIXANDO "NOVA TRANSAÇÃO"
-E "EXTRATO DE TRANSAÇÕES" UM DO LADO DO OUTRO.*/
-/*.transacao {
-    display: flex;
-  padding-top: 30px; */ /* SEPARA O CONTAINER DO HEADER. 
-}*/
+/* alinha ao centro o texto colocado caso não tenha nenhuma transação */
+.nenhumaTransacao {
+  display: grid;
+  justify-content: center;
+}
 /* ADICIONA PARÂMETROS DO CONTAINER DE EXTRATO.  */
 .extrato-bg {
   /*   border: 1px solid var(--cor-4); */
@@ -16,18 +15,25 @@ E "EXTRATO DE TRANSAÇÕES" UM DO LADO DO OUTRO.*/
   text-align: center;
 }
 
-/* PADRONIZA OS PARÂMETROS MERCADORIA E VALOR COM SUAS DEVIDAS CONFIGURAÇÕES. */
+/* variável criada só pra jogar o display grid usar onde for necessário */
+.d-grid {
+  display: grid;
+}
 
+/* faz com que a tabela se comporte em colunas com display grid
+   contém 5 colunas ao todo */
 .grid-bg {
   display: grid;
   grid-template-columns: 10% 30% 30% 10% 20%;
 }
+
+/* da o espaço dentro do variável e coloca uma borda abaixo dela */
 .extratos {
-  /*  display: grid;
-  grid-template-columns: 10% 30% 30% 30%;
-  border-bottom: 1px solid var(--cor-4); */
+  padding: 7px 0 8px 0;
+  border-bottom: 1px solid var(--cor-4);
 }
 
+/* alinha os id's name e valor a esquerda */
 #name {
   text-align: left;
 }
@@ -35,60 +41,33 @@ E "EXTRATO DE TRANSAÇÕES" UM DO LADO DO OUTRO.*/
   text-align: left;
 }
 
-/* PADRONIZA OS PARÂMETROS DAS MERCADORIAS .*/
-.mercadorias {
-  /*  display: grid;
-  align-items: center;
-  padding: 7px 0 8px 0;
-  grid-template-columns: 10% 30% 30% 30%;
-  border-bottom: 1px solid var(--cor-4); */
+/* alinha o sinal de + ou - a direita
+   coloca padding right para que não fique grudado a direita */
+.campoTransacao {
+  text-align: right;
+  padding-right: 10px;
 }
 
-/* .campoTransacao {
-  width: 10%;
-} */
-
+/* faz com que o texto digitado em campoMercadoria quebre toda vez 
+   que chegar ao fim do seu width */
 .campoMercadoria {
   word-wrap: break-word;
 }
 
-.campoValor {
+/* parte do valor total de todas as transações */
+.lucroTotal {
+  display: grid;
+  grid-template-columns: 10% 30% 30% 10% 20%;
+  border-top: 1px solid var(--cor-4);
+  padding-top: 11px;
+}
+
+/* alinha o valor total a esquerda */
+.totalValor {
   text-align: left;
 }
 
-/* PADRONIZA OS PARÂMETROS DO VALOR TOTAL.*/
-/*.total {
-    display: flex;
-  justify-content: space-between;
-  padding: 7px 20px 0px 40px;
-  margin-top: 3px;
-  border-top: 1px solid var(--cor-4); 
-}*/
-
-/* PADRONIZA OS PARÂMETROS DO LUCRO. */
-/*.lucro {
-   display: flex;
-  justify-content: flex-end; 
-}
-*/
-.lucroTotal {
-  display: grid;
-  grid-template-columns: 10% 30% 30% 30%;
-  border-top: 1px solid var(--cor-4);
-}
-
-/*.totalValor {
-   width: 100%;
-  display: flex;
-  justify-content: right;
-  padding-right: 20px; 
-}*/
-
-.valor-bg {
-  width: 100%;
-}
-
-.nenhumaTransacao {
-  display: flex;
-  justify-content: center;
+/* alinha o lucro ou prejuízo a esquerda */
+.lucroPrejuizo {
+  text-align: left;
 }
