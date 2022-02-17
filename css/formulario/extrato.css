@@ -37,7 +37,7 @@ E "EXTRATO DE TRANSAÇÕES" UM DO LADO DO OUTRO.*/
    contém 5 colunas ao todo */
 .grid-bg {
   display: grid;
-  grid-template-columns: 10% 30% 18% 40% 2%;
+  grid-template-columns: 10% 30% 29% 29% 2%;
 }
 
 /* da o espaço dentro do variável e coloca uma borda abaixo dela */
@@ -51,7 +51,7 @@ E "EXTRATO DE TRANSAÇÕES" UM DO LADO DO OUTRO.*/
   text-align: left;
 }
 .valor {
-  text-align: right;
+  text-align: left;
 }
 
 /* alinha o sinal de + ou - a direita
@@ -68,23 +68,23 @@ E "EXTRATO DE TRANSAÇÕES" UM DO LADO DO OUTRO.*/
 }
 
 .valor-calculado {
-  text-align: right;
+  text-align: left;
 }
 
 /* parte do valor total de todas as transações */
 .lucroTotal {
   display: grid;
-  grid-template-columns: 10% 30% 18% 40% 2%;
+  grid-template-columns: 10% 30% 29% 29% 2%;
   border-top: 1px solid var(--cor-4);
   padding-top: 11px;
 }
 
 /* alinha o valor total a esquerda */
 .totalValor {
-  text-align: right;
+  text-align: left;
 }
 
 /* alinha o lucro ou prejuízo a esquerda */
 .lucroPrejuizo {
-  text-align: right;
+  text-align: left;
 }
