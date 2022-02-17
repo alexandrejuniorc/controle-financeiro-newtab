@@ -4,10 +4,8 @@
 /*  UTILIDADES  */
 @import "../css/global/componentes.css";
 
-/* RESPONSIVO */
-@import "../css/global/responsivo.css";
-
-/* FORMULÁRIO */
+/* CONTÉM TODA ESTILIZAÇÃO DO FORMULÁRIO
+E TAMBÉM CONTÉM O CONTEÚDO RESPONSIVO*/
 @import "../css/formulario/formulario.css";
 
 /* EXTRATO */
